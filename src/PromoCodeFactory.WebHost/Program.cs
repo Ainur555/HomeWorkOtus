@@ -1,5 +1,9 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using EntityFrameWorkCore;
+using Microsoft.EntityFrameworkCore;
+using PromoCodeFactory.DataAccess;
 
 namespace PromoCodeFactory.WebHost
 {
@@ -7,7 +11,17 @@ namespace PromoCodeFactory.WebHost
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            using (var scope = host.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<EfDbContext>();
+                //db.Database.EnsureDeletedAsync();
+                //db.Database.Migrate();
+                DbInitializer.Initialize(db);
+            }
+            host.Run();
+
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

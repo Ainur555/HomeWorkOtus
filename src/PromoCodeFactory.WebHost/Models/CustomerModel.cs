@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
+using System;
+using PromoCodeFactory.WebHost.Models.PromoCodes;
 
 namespace PromoCodeFactory.WebHost.Models
 {
-    public class EmployeeCreate
+    public class CustomerModel
     {
+        public Guid Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        public RoleCreate Role { get; set; }
         public string Email { get; set; }
 
-        public int AppliedPromocodesCount { get; set; }
+        public List<PromoCodeModel> PromoCodes { get; set; }
     }
 }

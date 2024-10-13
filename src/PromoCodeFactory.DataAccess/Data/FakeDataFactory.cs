@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using PromoCodeFactory.Core.Domain.Administration;
+using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 
 namespace PromoCodeFactory.DataAccess.Data
 {
     public static class FakeDataFactory
     {
-        public static IList<Employee> Employees => new List<Employee>()
+        public static IEnumerable<Employee> Employees => new List<Employee>()
         {
             new Employee()
             {
@@ -15,10 +16,7 @@ namespace PromoCodeFactory.DataAccess.Data
                 Email = "owner@somemail.ru",
                 FirstName = "Иван",
                 LastName = "Сергеев",
-                Roles = new List<Role>()
-                {
-                    Roles.FirstOrDefault(x => x.Name == "Admin")  
-                },
+                Role = Roles.FirstOrDefault(x => x.Name == "Admin"),
                 AppliedPromocodesCount = 5
             },
             new Employee()
@@ -27,15 +25,12 @@ namespace PromoCodeFactory.DataAccess.Data
                 Email = "andreev@somemail.ru",
                 FirstName = "Петр",
                 LastName = "Андреев",
-                Roles = new List<Role>()
-                {
-                    Roles.FirstOrDefault(x => x.Name == "PartnerManager")  
-                },
+                Role = Roles.FirstOrDefault(x => x.Name == "PartnerManager"),
                 AppliedPromocodesCount = 10
             },
         };
 
-        public static IList<Role> Roles => new List<Role>()
+        public static IEnumerable<Role> Roles => new List<Role>()
         {
             new Role()
             {
@@ -50,5 +45,71 @@ namespace PromoCodeFactory.DataAccess.Data
                 Description = "Партнерский менеджер"
             }
         };
+
+        public static IEnumerable<Preference> Preferences => new List<Preference>()
+        {
+            new Preference()
+            {
+                Id = Guid.Parse("ef7f299f-92d7-459f-896e-078ed53ef99c"),
+                Name = "Театр",
+            },
+            new Preference()
+            {
+                Id = Guid.Parse("c4bda62e-fc74-4256-a956-4760b3858cbd"),
+                Name = "Семья",
+            },
+            new Preference()
+            {
+                Id = Guid.Parse("76324c47-68d2-472d-abb8-33cfa8cc0c84"),
+                Name = "Дети",
+            }
+        };
+
+        public static IEnumerable<Customer> Customers
+        {
+            get
+            {
+                var customers = new List<Customer>()
+            {
+                new Customer()
+                {
+                    Id = Guid.NewGuid(), // Генерируем новый ID для каждого клиента
+                    Email = "ivan_sergeev@mail.ru",
+                    FirstName = "Иван",
+                    LastName = "Петров",
+                    Preferences = new List<CustomerPreference>
+                    {
+                        new CustomerPreference
+                        {
+                            // Установите CustomerId позже в DbInitializer
+                            // Для этого мы добавим CustomerPreference без CustomerId
+                            PreferenceId = Preferences.ElementAt(0).Id // Например, "Театр"
+                        },
+                        new CustomerPreference
+                        {
+                            PreferenceId = Preferences.ElementAt(1).Id // Например, "Семья"
+                        }
+                    }
+                },
+                new Customer()
+                {
+                    Id = Guid.NewGuid(), // Генерируем новый ID для второго клиента
+                    Email = "petr_andreev@mail.ru",
+                    FirstName = "Петр",
+                    LastName = "Андреев",
+                    Preferences = new List<CustomerPreference>
+                    {
+                        new CustomerPreference
+                        {
+                            PreferenceId = Preferences.ElementAt(2).Id // Например, "Дети"
+                        }
+                    }
+                }
+            };
+
+                return customers;
+            }
+        }
     }
 }
+        

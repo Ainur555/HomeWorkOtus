@@ -17,9 +17,9 @@ namespace PromoCodeFactory.WebHost.Controllers
     [Route("api/v1/[controller]")]
     public class EmployeesController : ControllerBase
     {
-        private readonly IRepository<Employee> _employeeRepository;
+        private readonly IRepositoryOld<Employee> _employeeRepository;
 
-        public EmployeesController(IRepository<Employee> employeeRepository)
+        public EmployeesController(IRepositoryOld<Employee> employeeRepository)
         {
             _employeeRepository = employeeRepository;
         }
@@ -60,11 +60,11 @@ namespace PromoCodeFactory.WebHost.Controllers
             {
                 Id = employee.Id,
                 Email = employee.Email,
-                Roles = employee.Roles.Select(x => new RoleItemResponse()
+                Role = new RoleItemResponse()
                 {
-                    Name = x.Name,
-                    Description = x.Description
-                }).ToList(),
+                    Name = employee.Role.Name,
+                    Description = employee.Role.Description
+                },
                 FullName = employee.FullName,
                 AppliedPromocodesCount = employee.AppliedPromocodesCount
             };
@@ -109,12 +109,12 @@ namespace PromoCodeFactory.WebHost.Controllers
                 Email = request.Email,
                 FirstName = request.FirstName,
                 LastName = request.LastName,
-                Roles = request.Roles.Select(r => new Role
+                Role = new Role()
                 {
-                    Id = Guid.NewGuid(),
-                    Name = r.Name,
-                    Description = r.Description
-                }).ToList()
+                    Id          = Guid.NewGuid(),
+                    Name        = request.Role.Name,
+                    Description = request.Role.Description
+                },
             };
 
             await _employeeRepository.AddAsync(newEmployee);
@@ -124,11 +124,11 @@ namespace PromoCodeFactory.WebHost.Controllers
                 Id = newEmployee.Id,
                 FullName = newEmployee.FullName,
                 Email = newEmployee.Email,
-                Roles = newEmployee.Roles.Select(r => new RoleItemResponse
+                Role = new RoleItemResponse()
                 {
-                    Name = r.Name,
-                    Description = r.Description
-                }).ToList(),
+                    Name = newEmployee.Role.Name,
+                    Description = newEmployee.Role.Description
+                },
                 AppliedPromocodesCount = newEmployee.AppliedPromocodesCount
             };
 
@@ -165,11 +165,11 @@ namespace PromoCodeFactory.WebHost.Controllers
                 Id = existingEmployee.Id,
                 FullName = existingEmployee.FullName,
                 Email = existingEmployee.Email,
-                Roles = existingEmployee.Roles.Select(r => new RoleItemResponse
+                Role = new RoleItemResponse()
                 {
-                    Name = r.Name,
-                    Description = r.Description
-                }).ToList(),
+                    Name = existingEmployee.Role.Name,
+                    Description = existingEmployee.Role.Description
+                },
                 AppliedPromocodesCount = existingEmployee.AppliedPromocodesCount
             };
 
