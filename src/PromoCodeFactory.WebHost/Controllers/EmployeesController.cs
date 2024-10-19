@@ -17,9 +17,9 @@ namespace PromoCodeFactory.WebHost.Controllers
     [Route("api/v1/[controller]")]
     public class EmployeesController : ControllerBase
     {
-        private readonly IRepositoryOld<Employee> _employeeRepository;
+        private readonly IRepository<Employee> _employeeRepository;
 
-        public EmployeesController(IRepositoryOld<Employee> employeeRepository)
+        public EmployeesController(IRepository<Employee> employeeRepository)
         {
             _employeeRepository = employeeRepository;
         }
@@ -31,7 +31,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpGet]
         public async Task<List<EmployeeShortResponse>> GetEmployeesAsync()
         {
-            var employees = await _employeeRepository.GetAllAsync();
+            var employees = await _employeeRepository.GetAllAsync(default, true);
 
             var employeesModelList = employees.Select(x =>
                 new EmployeeShortResponse()
@@ -51,7 +51,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<EmployeeResponse>> GetEmployeeByIdAsync(Guid id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(id, default);
 
             if (employee == null)
                 return NotFound();
@@ -79,14 +79,14 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<ActionResult<string>> DeleteEmployeeByIdAsync(Guid id)
         {
-            var employee = await _employeeRepository.GetByIdAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(id, default);
 
             if (employee == null)
             {
                 return NotFound($"Сотрудник с id {id} не найден");
             }
 
-            await _employeeRepository.DeleteAsync(id);
+            _employeeRepository.Delete(id);
 
             return Ok($"Сотрудник с id {id} удален");
         }
@@ -96,7 +96,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<EmployeeResponse>> CreateEmployeeAsync([FromBody] EmployeeCreate request)
+        public async Task<ActionResult<EmployeeResponse>> CreateEmployeeAsync(EmployeeCreate request)
         {
             if (request == null || string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.FirstName) || string.IsNullOrWhiteSpace(request.LastName))
             {
@@ -117,7 +117,7 @@ namespace PromoCodeFactory.WebHost.Controllers
                 },
             };
 
-            await _employeeRepository.AddAsync(newEmployee);
+            await _employeeRepository.AddAsync(newEmployee, default);
 
             var employeeResponse = new EmployeeResponse
             {
@@ -143,9 +143,9 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPut("{id:guid}")]
-        public async Task<ActionResult<EmployeeResponse>> UpdateEmployeeAsync(Guid id, [FromBody] EmployeeUpdate request)
+        public async Task<ActionResult<EmployeeResponse>> UpdateEmployeeAsync(Guid id, EmployeeUpdate request)
         {       
-            var existingEmployee = await _employeeRepository.GetByIdAsync(id);
+            var existingEmployee = await _employeeRepository.GetByIdAsync(id, default);
 
             if (existingEmployee == null)
             {
@@ -158,7 +158,7 @@ namespace PromoCodeFactory.WebHost.Controllers
             existingEmployee.LastName               = !string.IsNullOrWhiteSpace(request.LastName) ? request.LastName : existingEmployee.LastName;
             existingEmployee.AppliedPromocodesCount = request.AppliedPromocodesCount != 0 ? request.AppliedPromocodesCount : existingEmployee.AppliedPromocodesCount;
 
-            await _employeeRepository.UpdateAsync(existingEmployee);
+            _employeeRepository.Update(existingEmployee);
 
             var employeeResponse = new EmployeeResponse
             {

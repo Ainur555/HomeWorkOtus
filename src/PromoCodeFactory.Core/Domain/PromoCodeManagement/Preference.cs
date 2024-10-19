@@ -8,6 +8,13 @@ namespace PromoCodeFactory.Core.Domain.PromoCodeManagement
 {
     public class Preference : BaseEntity
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
+
+        public ICollection<PromoCode> Promocodes { get; set; }
+
+        public Preference()
+        {
+            Promocodes = new List<PromoCode>();
+        }
     }
 }

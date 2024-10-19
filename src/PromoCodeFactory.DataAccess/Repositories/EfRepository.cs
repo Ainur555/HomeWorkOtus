@@ -26,7 +26,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// <param name="id"> Id сущности. </param>
         /// <param name="cancellationToken"></param>
         /// <returns> Cущность. </returns>
-        public virtual async Task<T> GetByIdAsync(Guid id)
+        public virtual async Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
             return await _entitySet.FindAsync(id);
         }
@@ -58,7 +58,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// </summary>
         /// <param name="entity"> Сущность для добавления. </param>
         /// <returns> Добавленная сущность. </returns>
-        public virtual async Task<T> AddAsync(T entity)
+        public virtual async Task<T> AddAsync(T entity, CancellationToken cancellationToken)
         {
             return (await _entitySet.AddAsync(entity)).Entity;
         }
@@ -67,7 +67,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// Добавить в базу массив сущностей.
         /// </summary>
         /// <param name="entities"> Массив сущностей. </param>
-        public virtual async Task AddRangeAsync(ICollection<T> entities)
+        public virtual async Task AddRangeAsync(ICollection<T> entities, CancellationToken cancellationToken)
         {
             if (entities == null || !entities.Any())
             {
@@ -92,7 +92,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// </summary>
         /// <param name="id"> Id удалённой сущности. </param>
         /// <returns> Была ли сущность удалена. </returns>
-        public virtual bool DeleteAsync(Guid id)
+        public virtual bool Delete(Guid id)
         {
             var obj = _entitySet.Find(id);
             if (obj == null)
@@ -130,10 +130,9 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// <summary>
         /// Сохранить изменения.
         /// </summary>
-        public virtual async Task SaveChangesAsync(CancellationToken cancellationToken = default)
+        public virtual async Task SaveChangesAsync(CancellationToken cancellationToken)
         {
             await Context.SaveChangesAsync(cancellationToken);
-        }             
-   
+        }
     }
 }

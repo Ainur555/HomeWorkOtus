@@ -14,6 +14,7 @@ namespace PromoCodeFactory.WebHost.Mapping
             CreateMap<PromoCode, PromoCodeDto>();
             CreateMap<PromoCodeShortResponseDto, PromoCodeShortResponse>();
             CreateMap<PromoCodeFilterDto, PromoCodeFilterModel>();
+            CreateMap<GivePromoCodeRequest, GivePromoCodeRequestDto>();
         }
     }
 }

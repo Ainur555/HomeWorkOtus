@@ -10,10 +10,10 @@ namespace PromoCodeFactory.WebHost.Models
 {
     public class CustomerResponse
     {
-        public Guid Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
+        public Guid Id { get; init; }
+        public required string FirstName { get; init; }
+        public required string LastName { get; init; }
+        public required string Email { get; init; }
    
         public List<PromoCodeShortResponse> PromoCodes { get; set; }
         public List<PreferencesModel> Preferences { get; set; }

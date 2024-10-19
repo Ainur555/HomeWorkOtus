@@ -1,6 +1,8 @@
 using AutoMapper;
+using EntityFrameWorkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,9 +25,7 @@ namespace PromoCodeFactory.WebHost
         }
 
         public void ConfigureServices(IServiceCollection services)
-        {
-           
-
+        {           
             InstallAutomapper(services);
             services.AddServices(Configuration);
             services.AddControllers();
@@ -69,7 +69,7 @@ namespace PromoCodeFactory.WebHost
         {
             services.AddSingleton<IMapper>(new Mapper(GetMapperConfiguration()));
             return services;
-        }
+        }    
 
         private static MapperConfiguration GetMapperConfiguration()
         {
@@ -78,7 +78,9 @@ namespace PromoCodeFactory.WebHost
                 cfg.AddProfile<CustomerMappingsProfile>();
                 cfg.AddProfile<PromoCodeMappingsProfile>();
                 cfg.AddProfile<PreferenceMappingsProfile>();
+                cfg.AddProfile<PartnersMappingsProfile>();                
             });
+
             configuration.AssertConfigurationIsValid();
             return configuration;
         }

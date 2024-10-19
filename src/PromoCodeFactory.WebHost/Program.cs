@@ -4,24 +4,21 @@ using Microsoft.Extensions.Hosting;
 using EntityFrameWorkCore;
 using Microsoft.EntityFrameworkCore;
 using PromoCodeFactory.DataAccess;
+using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
+using System;
+using System.Runtime.InteropServices;
+using PromoCodeFactory.WebHost.Extensions;
 
 namespace PromoCodeFactory.WebHost
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-            using (var scope = host.Services.CreateScope())
-            {
-                var db = scope.ServiceProvider.GetRequiredService<EfDbContext>();
-                //db.Database.EnsureDeletedAsync();
-                //db.Database.Migrate();
-                DbInitializer.Initialize(db);
-            }
-            host.Run();
-
-
+            await host.MigrationDataBaseAcync();
+            await host.RunAsync();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

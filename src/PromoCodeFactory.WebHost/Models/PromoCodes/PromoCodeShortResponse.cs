@@ -4,16 +4,16 @@ namespace PromoCodeFactory.WebHost.Models.PromoCodes
 {
     public class PromoCodeShortResponse
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; init; }
 
-        public string Code { get; set; }
+        public required string Code { get; init; }
 
-        public string ServiceInfo { get; set; }
+        public required string ServiceInfo { get; init; }
 
-        public string BeginDate { get; set; }
+        public string BeginDate { get; init; }
 
-        public string EndDate { get; set; }
+        public string EndDate { get; init; }
 
-        public string PartnerName { get; set; }
+        public string PartnerName { get; init; }
     }
 }

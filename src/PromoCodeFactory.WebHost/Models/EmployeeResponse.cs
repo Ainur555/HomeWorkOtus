@@ -5,13 +5,13 @@ namespace PromoCodeFactory.WebHost.Models
 {
     public class EmployeeResponse
     {
-        public Guid Id { get; set; }
-        public string FullName { get; set; }
+        public Guid Id { get; init; }
+        public required string FullName { get; init; }
 
-        public string Email { get; set; }
+        public required string Email { get; init; }
 
-        public RoleItemResponse Role { get; set; }
+        public RoleItemResponse Role { get; init; }
 
-        public int AppliedPromocodesCount { get; set; }
+        public int AppliedPromocodesCount { get; init; }
     }
 }

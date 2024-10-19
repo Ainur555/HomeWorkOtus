@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace PromoCodeFactory.DataAccess.Repositories
@@ -19,7 +20,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
             _context = context;
         }
 
-        public async Task AddPreferenceToCustomerAsync(CustomerPreference customerPreference)
+        public async Task AddPreferenceToCustomerAsync(CustomerPreference customerPreference, CancellationToken cancellationToken)
         {
             var exists = await _context.CustomerPreferences
                 .AnyAsync(cp => cp.CustomerId == customerPreference.CustomerId && cp.PreferenceId == customerPreference.PreferenceId);
@@ -36,7 +37,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
 
         }
 
-        public async Task<List<Customer>> GetCustomersByPreferenceAsync(Guid preferenceId)
+        public async Task<List<Customer>> GetCustomersByPreferenceAsync(Guid preferenceId, CancellationToken cancellationToken)
         {
             return await _context.CustomerPreferences
              .Where(cp => cp.PreferenceId == preferenceId)
@@ -44,7 +45,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
              .ToListAsync();
         }
 
-        public async Task<List<Preference>> GetPreferencesByCustomerAsync(Guid customerId)
+        public async Task<List<Preference>> GetPreferencesByCustomerAsync(Guid customerId, CancellationToken cancellationToken)
         {
             return await _context.CustomerPreferences
               .Where(cp => cp.CustomerId == customerId)
@@ -60,7 +61,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
 
 
 
-        public async Task RemovePreferenceFromCustomerAsync(Guid customerId, Guid preferenceId)
+        public async Task RemovePreferenceFromCustomerAsync(Guid customerId, Guid preferenceId, CancellationToken cancellationToken)
         {
             var customerPreference = await _context.CustomerPreferences
              .FirstOrDefaultAsync(cp => cp.CustomerId == customerId && cp.PreferenceId == preferenceId);

@@ -6,6 +6,9 @@ using PromoCodeFactory.WebHost.Services;
 using PromoCodeFactory.WebHost.Settings;
 using EntityFrameWorkCore;
 using PromoCodeFactory.WebHost.Services.Preferences;
+using PromoCodeFactory.WebHost.Services.PromoCodes;
+using PromoCodeFactory.WebHost.Extensions;
+using PromoCodeFactory.WebHost.Services.Partners;
 
 namespace PromoCodeFactory.WebHost
 {
@@ -26,7 +29,8 @@ namespace PromoCodeFactory.WebHost
         {
             serviceCollection
                 .AddTransient<ICustomerService, CustomerService>()
-                .AddTransient<IPreferenceService, PreferenceService>();
+                .AddTransient<IPreferenceService, PreferenceService>()
+                .AddTransient<IPromoCodeService, PromoCodeService>();
             return serviceCollection;
         }
 
@@ -36,7 +40,8 @@ namespace PromoCodeFactory.WebHost
                 .AddTransient<ICustomerRepository, CustomerRepository>()
                 .AddTransient<IPreferenceRepository, PreferenceRepository>()
                 .AddTransient<ICustomerPreferenceRepository, CustomerPreferenceRepository>()
-                .AddTransient<IPromoCodeRepository, PromoCodeRepository>();
+                .AddTransient<IPromoCodeRepository, PromoCodeRepository>()
+                .AddTransient<IEmployeeRepository, EmployeeRepository>();
             return serviceCollection;
         }
     }

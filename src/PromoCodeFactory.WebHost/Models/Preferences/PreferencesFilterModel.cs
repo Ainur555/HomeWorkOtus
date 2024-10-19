@@ -2,9 +2,9 @@
 {
     public class PreferencesFilterModel
     {
-        public string Name { get; set; }
+        public required string Name { get; init; }
 
-        public int ItemsPerPage { get; set; }
-        public int Page { get; set; }
+        public int ItemsPerPage { get; init; }
+        public int Page { get; init; }
     }
 }

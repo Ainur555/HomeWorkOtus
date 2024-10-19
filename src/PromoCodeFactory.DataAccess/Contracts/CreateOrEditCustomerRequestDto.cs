@@ -9,9 +9,9 @@ namespace PromoCodeFactory.DataAccess.Contracts
 {
     public class CreateOrEditCustomerRequestDto
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
+        public required string FirstName { get; init; }
+        public required string LastName { get; init; }
+        public required string Email { get; init; }
         public List<Guid> PreferenceIds { get; set; }
     }
 }

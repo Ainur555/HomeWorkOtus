@@ -4,10 +4,10 @@ namespace PromoCodeFactory.WebHost.Models
 {
     public class EmployeeShortResponse
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; init; }
         
-        public string FullName { get; set; }
+        public required string FullName { get; init; }
 
-        public string Email { get; set; }
+        public required string Email { get; init; }
     }
 }

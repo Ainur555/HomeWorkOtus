@@ -29,7 +29,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpGet]
         public async Task<List<RoleItemResponse>> GetRolesAsync()
         {
-            var roles = await _rolesRepository.GetAllAsync();
+            var roles = await _rolesRepository.GetAllAsync(default, false);
 
             var rolesModelList = roles.Select(x =>
                 new RoleItemResponse()

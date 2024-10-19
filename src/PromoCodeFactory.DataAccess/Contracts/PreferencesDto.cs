@@ -8,7 +8,7 @@ namespace PromoCodeFactory.DataAccess.Contracts.Preferences
 {
     public class PreferencesDto
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
+        public Guid Id { get; init; }
+        public required string Name { get; init; }
     }
 }

@@ -10,18 +10,18 @@ namespace PromoCodeFactory.DataAccess.Contracts.PromoCodes
 {
     public class PromoCodeFilterDto
     {
-        public string Code { get; set; }
+        public required string Code { get; init; }
 
-        public string ServiceInfo { get; set; }
+        public required string ServiceInfo { get; init; }
 
-        public DateTime BeginDate { get; set; }
+        public DateTime BeginDate { get; init; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime EndDate { get; init; }
 
-        public string PartnerName { get; set; }
+        public string PartnerName { get; init; }
 
-        public int ItemsPerPage { get; set; }
-        public int Page { get; set; }
+        public int ItemsPerPage { get; init; }
+        public int Page { get; init; }
 
     }
 }

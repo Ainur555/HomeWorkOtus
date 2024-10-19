@@ -38,7 +38,7 @@ namespace PromoCodeFactory.WebHost.Services
 
         async Task<CustomerDto> ICustomerService.GetByIdAsync(Guid id)
         {
-            var customer = await _customerRepository.GetByIdAsync(id);
+            var customer = await _customerRepository.GetByIdAsync(id, default);
 
             return _mapper.Map<Customer, CustomerDto>(customer);
         }
@@ -51,11 +51,11 @@ namespace PromoCodeFactory.WebHost.Services
         public async Task<CustomerResponseDto> CreateAsync(CreateOrEditCustomerRequestDto creatingCustomerDto)
         {
             var customer        = _mapper.Map<CreateOrEditCustomerRequestDto, Customer>(creatingCustomerDto);
-            var createdCustomer = await _customerRepository.AddAsync(customer);
+            var createdCustomer = await _customerRepository.AddAsync(customer, default);
                  
-            await _customerRepository.SaveChangesAsync();
+            await _customerRepository.SaveChangesAsync(default);
 
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(createdCustomer.Id);
+            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(createdCustomer.Id, default);
 
             return new CustomerResponseDto()
             {
@@ -73,7 +73,7 @@ namespace PromoCodeFactory.WebHost.Services
 
         public async Task<CustomerResponseDto> UpdateAsync(Guid id, CreateOrEditCustomerRequestDto updatingCustomerDto)
         {
-            var customer = await _customerRepository.GetByIdAsync(id);
+            var customer = await _customerRepository.GetByIdAsync(id, default);
 
             if (customer == null)
             {
@@ -85,9 +85,9 @@ namespace PromoCodeFactory.WebHost.Services
             customer.Email    = !string.IsNullOrWhiteSpace(updatingCustomerDto.Email) ? updatingCustomerDto.Email : customer.Email;
            
             _customerRepository.Update(customer);
-            await _customerRepository.SaveChangesAsync();
+            await _customerRepository.SaveChangesAsync(default);
 
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id);
+            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id, default);
 
             return new CustomerResponseDto()
             {
@@ -105,16 +105,16 @@ namespace PromoCodeFactory.WebHost.Services
       
         async Task ICustomerService.DeleteAsync(Guid id)
         {
-            var customer = await _customerRepository.GetByIdAsync(id);
+            var customer = await _customerRepository.GetByIdAsync(id, default);
 
             if (customer == null)
             {
                 throw new Exception($"Клиент с идентфикатором {id} не найден");
             }            
 
-            _customerRepository.DeleteAsync(id);
+            _customerRepository.Delete(id);
 
-            await _customerRepository.SaveChangesAsync();
+            await _customerRepository.SaveChangesAsync(default);
         }
 
         public async Task<ICollection<CustomerDto>> GetPagedAsync(CustomerFilterDto filterDto)
