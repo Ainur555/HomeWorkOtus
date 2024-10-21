@@ -9,7 +9,7 @@ using PromoCodeFactory.Core.Domain;
 
 namespace PromoCodeFactory.DataAccess.Repositories
 {
-    public abstract class EfRepository<T> : IRepository<T> where T: BaseEntity
+    public abstract class EfRepository<T> : IRepository<T> where T : BaseEntity
     {
         protected readonly DbContext Context;
         private readonly DbSet<T> _entitySet;
@@ -28,19 +28,13 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// <returns> Cущность. </returns>
         public virtual async Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            return await _entitySet.FindAsync(id);
+            return await _entitySet.FirstOrDefaultAsync(x => x.Id == id, cancellationToken: cancellationToken);
         }
 
-        /// <summary>
-        /// Запросить все сущности в базе.
-        /// </summary>
-        /// <param name="asNoTracking"> Вызвать с AsNoTracking. </param>
-        /// <returns> IQueryable массив сущностей. </returns>
-        public virtual IQueryable<T> GetAll(bool asNoTracking = false)
+        public virtual IQueryable<T> GetAll()
         {
-            return asNoTracking ? _entitySet.AsNoTracking() : _entitySet;
+            return _entitySet.AsNoTracking();
         }
-
 
         /// <summary>
         /// Запросить все сущности в базе.
@@ -48,11 +42,11 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// <param name="cancellationToken"> Токен отмены </param>
         /// <param name="asNoTracking"> Вызвать с AsNoTracking. </param>
         /// <returns> Список сущностей. </returns>
-        public async Task<List<T>> GetAllAsync(CancellationToken cancellationToken, bool asNoTracking = false)
+        public Task<List<T>> GetAllAsync(CancellationToken cancellationToken)
         {
-            return await GetAll().ToListAsync(cancellationToken);
+            return _entitySet.AsNoTracking().ToListAsync(cancellationToken);
         }
-      
+
         /// <summary>
         /// Добавить в базу одну сущность.
         /// </summary>
@@ -60,7 +54,7 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// <returns> Добавленная сущность. </returns>
         public virtual async Task<T> AddAsync(T entity, CancellationToken cancellationToken)
         {
-            return (await _entitySet.AddAsync(entity)).Entity;
+            return (await _entitySet.AddAsync(entity, cancellationToken)).Entity;
         }
 
         /// <summary>
@@ -73,7 +67,8 @@ namespace PromoCodeFactory.DataAccess.Repositories
             {
                 return;
             }
-            await _entitySet.AddRangeAsync(entities);
+
+            await _entitySet.AddRangeAsync(entities, cancellationToken);
         }
 
 
@@ -99,23 +94,8 @@ namespace PromoCodeFactory.DataAccess.Repositories
             {
                 return false;
             }
-            _entitySet.Remove(obj);
-            return true;
-        }
-      
 
-        /// <summary>
-        /// Удалить сущности.
-        /// </summary>
-        /// <param name="entities"> Коллекция сущностей для удаления. </param>
-        /// <returns> Была ли операция завершена успешно. </returns>
-        public virtual bool DeleteRange(ICollection<T> entities)
-        {
-            if (entities == null || !entities.Any())
-            {
-                return false;
-            }
-            _entitySet.RemoveRange(entities);
+            _entitySet.Remove(obj);
             return true;
         }
 

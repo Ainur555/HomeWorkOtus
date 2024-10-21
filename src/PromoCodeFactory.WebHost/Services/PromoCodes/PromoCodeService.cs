@@ -1,30 +1,28 @@
-﻿using PromoCodeFactory.Core.Domain.Administration;
+﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using AutoMapper;
 using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts.PromoCodes;
-using PromoCodeFactory.DataAccess.Contracts.Employee;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System;
 using PromoCodeFactory.DataAccess.Repositories;
-using AutoMapper;
-using PromoCodeFactory.DataAccess.Contracts;
 using PromoCodeFactory.WebHost.Helpers;
 
 namespace PromoCodeFactory.WebHost.Services.PromoCodes
 {
     public class PromoCodeService : IPromoCodeService
     {
-        private readonly IPromoCodeRepository            _promocodeRepository;
-        private readonly IPreferenceRepository           _preferenceRepository;
-        private readonly ICustomerPreferenceRepository   _customerPreferenceRepository;
-        private readonly IEmployeeRepository              _employeeRepository;
+        private readonly IPromoCodeRepository _promocodeRepository;
+        private readonly IPreferenceRepository _preferenceRepository;
+        private readonly ICustomerPreferenceRepository _customerPreferenceRepository;
+        private readonly IEmployeeRepository _employeeRepository;
         private readonly IMapper _mapper;
+
         public PromoCodeService(
             IPromoCodeRepository promocodeRepository,
             IPreferenceRepository preferenceRepository,
             IEmployeeRepository employeeRepository,
             ICustomerPreferenceRepository customerPreferenceRepository,
-            IMapper             mapper)
+            IMapper mapper)
         {
             _promocodeRepository = promocodeRepository;
             _preferenceRepository = preferenceRepository;
@@ -33,17 +31,17 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
             _mapper = mapper;
         }
 
-        public async Task<ICollection<PromoCodeDto>> GetPagedAsync(PromoCodeFilterDto filterDto)
+        public async Task<ICollection<PromoCodeDto>> GetPagedAsync(PromoCodeFilterDto filterDto, CancellationToken cancellationToken)
         {
-            ICollection<PromoCode> entities = await _promocodeRepository.GetPagedAsync(filterDto);
+            ICollection<PromoCode> entities = await _promocodeRepository.GetPagedAsync(filterDto, cancellationToken);
             return _mapper.Map<ICollection<PromoCode>, ICollection<PromoCodeDto>>(entities);
         }
 
-        public async Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequestDto request)
+        public async Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequestDto request, CancellationToken cancellationToken)
         {
-            var employee   = await _employeeRepository.GetByIdAsync(request.EmployeeId, default);
-            var preference = await _preferenceRepository.GetByIdAsync(request.PreferenceId, default);
-            var customers = await _customerPreferenceRepository.GetCustomersByPreferenceAsync(request.PreferenceId, default);
+            var employee = await _employeeRepository.GetByIdAsync(request.EmployeeId, cancellationToken);
+            var preference = await _preferenceRepository.GetByIdAsync(request.PreferenceId, cancellationToken);
+            var customers = await _customerPreferenceRepository.GetCustomersByPreferenceAsync(request.PreferenceId, cancellationToken);
 
             foreach (var customer in customers)
             {
@@ -57,10 +55,10 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
                     Preference = preference,
                     PartnerManager = employee,
                     Customer = customer,
-                }, default);
+                }, cancellationToken);
             }
-           
-            await _promocodeRepository.SaveChangesAsync(default);
+
+            await _promocodeRepository.SaveChangesAsync(cancellationToken);
         }
     }
 }

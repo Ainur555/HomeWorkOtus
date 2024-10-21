@@ -1,31 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using PromoCodeFactory.Core.Domain.PromoCodeManagement;
+﻿using Microsoft.EntityFrameworkCore;
 using PromoCodeFactory.Core.Domain.Administration;
+using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 
 namespace EntityFrameWorkCore
 {
-    public class EfDbContext : DbContext
+    public class EfDbContext(DbContextOptions<EfDbContext> options) : DbContext(options)
     {
-        public EfDbContext(DbContextOptions<EfDbContext> options) : base(options)
-        {
-        }
-
         public DbSet<Role> Roles { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Preference> Preferences { get; set; }
         public DbSet<PromoCode> PromoCodes { get; set; }
         public DbSet<CustomerPreference> CustomerPreferences { get; set; }
-        public DbSet<Partner> Partners { get; set; }
-        public DbSet<PartnerPromoCodeLimit> PartnerPromoCodeLimits { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -40,7 +26,7 @@ namespace EntityFrameWorkCore
                     .Property(r => r.Description)
                     .HasMaxLength(250);
             });
-                
+
 
             // Настройка Employee
             modelBuilder.Entity<Employee>(entity =>
@@ -125,7 +111,7 @@ namespace EntityFrameWorkCore
                     .HasMaxLength(250);
                 entity
                      .Property(p => p.PartnerName)
-                    .HasMaxLength(100);                             
+                    .HasMaxLength(100);
             });
 
             modelBuilder.Entity<Preference>(entity =>
@@ -138,26 +124,6 @@ namespace EntityFrameWorkCore
                 entity.HasKey(x => x.Id);
                 entity.Property(x => x.Id).HasColumnName("PreferenceId");
                 entity.Property(x => x.Name).HasMaxLength(32);
-            });
-
-            modelBuilder.Entity<Partner>(entity =>
-            {
-                entity.HasKey(x => x.Id);
-                entity
-                    .HasMany(partner => partner.PartnerLimits)
-                    .WithOne(partnerLimit => partnerLimit.Partner)
-                    .HasForeignKey(partnerLimit => partnerLimit.PartnerId);
-
-                entity.HasKey(x => x.Id);
-                entity.Property(x => x.Id).HasColumnName("PartnerId");
-                entity.Property(x => x.Name).HasMaxLength(32);
-            });
-
-            modelBuilder.Entity<PartnerPromoCodeLimit>(entity =>
-            {
-                entity.HasKey(x => x.Id);
-                entity.Property(x => x.Id).HasColumnName("PartnerPromocodeLimitId");
-                entity.Property(x => x.CancelDate).IsRequired(false);
             });
 
             base.OnModelCreating(modelBuilder);

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +30,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpGet]
         public async Task<List<EmployeeShortResponse>> GetEmployeesAsync()
         {
-            var employees = await _employeeRepository.GetAllAsync(default, true);
+            var employees = await _employeeRepository.GetAllAsync(HttpContext.RequestAborted);
 
             var employeesModelList = employees.Select(x =>
                 new EmployeeShortResponse()
@@ -144,7 +143,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// <returns></returns>
         [HttpPut("{id:guid}")]
         public async Task<ActionResult<EmployeeResponse>> UpdateEmployeeAsync(Guid id, EmployeeUpdate request)
-        {       
+        {
             var existingEmployee = await _employeeRepository.GetByIdAsync(id, default);
 
             if (existingEmployee == null)

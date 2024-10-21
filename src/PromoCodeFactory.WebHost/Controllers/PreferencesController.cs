@@ -1,13 +1,10 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PromoCodeFactory.DataAccess.Contracts;
-using PromoCodeFactory.WebHost.Models;
 using PromoCodeFactory.WebHost.Models.Preferences;
-using PromoCodeFactory.WebHost.Services;
 using PromoCodeFactory.WebHost.Services.Preferences;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace PromoCodeFactory.WebHost.Controllers
 {
@@ -33,7 +30,8 @@ namespace PromoCodeFactory.WebHost.Controllers
         public async Task<ActionResult<PreferencesModel>> GetCustomersAsync(PreferencesFilterModel filterModel)
         {
             var filterDto = _mapper.Map<PreferencesFilterModel, PreferencesFilterDto>(filterModel);
-            return Ok(_mapper.Map<List<PreferencesModel>>(await _service.GetPagedAsync(filterDto)));
+            var response = _mapper.Map<List<PreferencesModel>>(await _service.GetPagedAsync(filterDto, HttpContext.RequestAborted));
+            return Ok(response);
         }
 
     }

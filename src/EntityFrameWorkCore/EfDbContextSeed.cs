@@ -1,19 +1,35 @@
-﻿using EntityFrameWorkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PromoCodeFactory.DataAccess
+namespace EntityFrameWorkCore
 {
-    public class DbInitializer
+    public static class EfDbContextSeed
     {
-        public static void Initialize(EfDbContext context)
+        public static async Task MigrationDataBaseAsync(this IHost webHost)
         {
-            context.Database.EnsureCreated();
+            using var scope = webHost.Services.CreateScope();
+            var services = scope.ServiceProvider;
+
+            await using var db = services.GetRequiredService<EfDbContext>();
+            try
+            {
+                await db.Database.MigrateAsync();
+                await Seed(db);
+            }
+            catch (Exception ex)
+            {
+                //TODO: Add logging
+                throw;
+            }
+        }
+
+        public static async Task Seed(this EfDbContext context)
+        {
+            await context.Database.EnsureDeletedAsync();
+            await context.Database.EnsureCreatedAsync();
 
             SeedRoles(context);
             SeedEmployess(context);
@@ -36,7 +52,7 @@ namespace PromoCodeFactory.DataAccess
             if (!context.Employees.Any())
             {
                 foreach (var employee in FakeDataFactory.Employees)
-                {                 
+                {
                     var roleFromDb = context.Roles.FirstOrDefault(r => r.Name == employee.Role.Name);
                     if (roleFromDb != null)
                     {

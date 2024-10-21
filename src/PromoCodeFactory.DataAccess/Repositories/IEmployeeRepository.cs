@@ -1,14 +1,9 @@
-﻿using PromoCodeFactory.Core.Abstractions.Repositories;
-using PromoCodeFactory.Core.Domain.Administration;
-using PromoCodeFactory.Core.Domain.PromoCodeManagement;
-using PromoCodeFactory.DataAccess.Contracts;
-using PromoCodeFactory.DataAccess.Contracts.Employee;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using PromoCodeFactory.Core.Abstractions.Repositories;
+using PromoCodeFactory.Core.Domain.Administration;
+using PromoCodeFactory.DataAccess.Contracts.Employee;
 
 namespace PromoCodeFactory.DataAccess.Repositories
 {
@@ -19,6 +14,6 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// </summary>
         /// <param name="filterDto"> ДТО фильтра. </param>
         /// <returns> Список сотрудников </returns>
-        Task<List<Employee>> GetPagedAsync(EmployeeFilterDto filterDto);
+        Task<List<Employee>> GetPagedAsync(EmployeeFilterDto filterDto, CancellationToken cancellationToken);
     }
 }

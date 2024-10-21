@@ -6,12 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PromoCodeFactory.Core.Abstractions.Repositories;
-using PromoCodeFactory.Core.Domain.Administration;
-using PromoCodeFactory.Core.Domain.PromoCodeManagement;
-using PromoCodeFactory.DataAccess.Data;
-using PromoCodeFactory.DataAccess.Repositories;
 using PromoCodeFactory.WebHost.Mapping;
+using PromoCodeFactory.WebHost.Settings;
 
 namespace PromoCodeFactory.WebHost
 {
@@ -25,11 +21,14 @@ namespace PromoCodeFactory.WebHost
         }
 
         public void ConfigureServices(IServiceCollection services)
-        {           
+        {
+            services.AddDbContext<EfDbContext>(optionsBuilder
+                => optionsBuilder
+                    .UseSqlite(Configuration.Get<ApplicationSettings>().ConnectionString));
             InstallAutomapper(services);
             services.AddServices(Configuration);
             services.AddControllers();
-          
+
 
             services.AddOpenApiDocument(options =>
             {
@@ -54,7 +53,7 @@ namespace PromoCodeFactory.WebHost
             {
                 x.DocExpansion = "list";
             });
-            
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -69,7 +68,7 @@ namespace PromoCodeFactory.WebHost
         {
             services.AddSingleton<IMapper>(new Mapper(GetMapperConfiguration()));
             return services;
-        }    
+        }
 
         private static MapperConfiguration GetMapperConfiguration()
         {
@@ -78,7 +77,6 @@ namespace PromoCodeFactory.WebHost
                 cfg.AddProfile<CustomerMappingsProfile>();
                 cfg.AddProfile<PromoCodeMappingsProfile>();
                 cfg.AddProfile<PreferenceMappingsProfile>();
-                cfg.AddProfile<PartnersMappingsProfile>();                
             });
 
             configuration.AssertConfigurationIsValid();
