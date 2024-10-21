@@ -13,7 +13,7 @@ namespace PromoCodeFactory.WebHost.Controllers
     /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
-    public class RolesController
+    public class RolesController : ControllerBase
     {
         private readonly IRepository<Role> _rolesRepository;
 
@@ -29,7 +29,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpGet]
         public async Task<List<RoleItemResponse>> GetRolesAsync()
         {
-            var roles = await _rolesRepository.GetAllAsync(default, false);
+            var roles = await _rolesRepository.GetAllAsync(HttpContext.RequestAborted);
 
             var rolesModelList = roles.Select(x =>
                 new RoleItemResponse()

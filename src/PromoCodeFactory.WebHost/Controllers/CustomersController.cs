@@ -1,15 +1,11 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Cors.Infrastructure;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using PromoCodeFactory.Core.Domain.Administration;
-using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts;
 using PromoCodeFactory.WebHost.Models;
 using PromoCodeFactory.WebHost.Services;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace PromoCodeFactory.WebHost.Controllers
 {
@@ -38,7 +34,8 @@ namespace PromoCodeFactory.WebHost.Controllers
         public async Task<ActionResult<CustomerModel>> GetCustomersAsync(СustomerFilterModel filterModel)
         {
             var filterDto = _mapper.Map<СustomerFilterModel, CustomerFilterDto>(filterModel);
-            return Ok(_mapper.Map<List<CustomerModel>>(await _service.GetPagedAsync(filterDto)));
+            var response = _mapper.Map<List<CustomerModel>>(await _service.GetPagedAsync(filterDto, HttpContext.RequestAborted));
+            return Ok(response);
         }
 
         /// <summary>
@@ -49,7 +46,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<CustomerModel>> GetCustomerAsync(Guid id)
         {
-            return Ok(_mapper.Map<CustomerModel>(await _service.GetByIdAsync(id)));
+            return Ok(_mapper.Map<CustomerModel>(await _service.GetByIdAsync(id, HttpContext.RequestAborted)));
         }
 
         /// <summary>
@@ -60,7 +57,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpPost]
         public async Task<ActionResult<CustomerResponse>> CreateCustomerAsync(CreateOrEditCustomerRequest request)
         {
-            return Ok(await _service.CreateAsync(_mapper.Map<CreateOrEditCustomerRequestDto>(request)));
+            return Ok(await _service.CreateAsync(_mapper.Map<CreateOrEditCustomerRequestDto>(request), HttpContext.RequestAborted));
         }
 
         /// <summary>
@@ -73,7 +70,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<CustomerResponse>> EditCustomersAsync(Guid id, CreateOrEditCustomerRequest request)
         {
-            return Ok(await _service.UpdateAsync(id, _mapper.Map<CreateOrEditCustomerRequest, CreateOrEditCustomerRequestDto>(request)));           
+            return Ok(await _service.UpdateAsync(id, _mapper.Map<CreateOrEditCustomerRequest, CreateOrEditCustomerRequestDto>(request), HttpContext.RequestAborted));
         }
 
         /// <summary>
@@ -84,7 +81,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteCustomer(Guid id)
         {
-            await _service.DeleteAsync(id);
+            await _service.DeleteAsync(id, HttpContext.RequestAborted);
             return Ok($"Сотрудник с id {id} удален");
         }
     }

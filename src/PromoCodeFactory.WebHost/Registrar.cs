@@ -1,14 +1,10 @@
-﻿using Microsoft.AspNetCore.Cors.Infrastructure;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PromoCodeFactory.DataAccess.Repositories;
 using PromoCodeFactory.WebHost.Services;
-using PromoCodeFactory.WebHost.Settings;
-using EntityFrameWorkCore;
 using PromoCodeFactory.WebHost.Services.Preferences;
 using PromoCodeFactory.WebHost.Services.PromoCodes;
-using PromoCodeFactory.WebHost.Extensions;
-using PromoCodeFactory.WebHost.Services.Partners;
+using PromoCodeFactory.WebHost.Settings;
 
 namespace PromoCodeFactory.WebHost
 {
@@ -18,9 +14,8 @@ namespace PromoCodeFactory.WebHost
         {
             var applicationSettings = configuration.Get<ApplicationSettings>();
             services.AddSingleton(applicationSettings)
-                    .AddSingleton((IConfigurationRoot)configuration)
+                    .AddSingleton(configuration)
                     .InstallServices()
-                    .ConfigureContext(applicationSettings.ConnectionString)
                     .InstallRepositories();
             return services;
         }

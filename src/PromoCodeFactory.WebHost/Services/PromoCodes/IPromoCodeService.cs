@@ -1,9 +1,7 @@
-﻿using PromoCodeFactory.DataAccess.Contracts.PromoCodes;
-using PromoCodeFactory.DataAccess.Contracts.Partners;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using PromoCodeFactory.DataAccess.Contracts;
+using PromoCodeFactory.DataAccess.Contracts.PromoCodes;
 
 namespace PromoCodeFactory.WebHost.Services.PromoCodes
 {
@@ -14,8 +12,8 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
         /// </summary>
         /// <param name="filterDto"> ДТО фильтра. </param>
         /// <returns> Список Промокодов. </returns>
-        Task<ICollection<PromoCodeDto>> GetPagedAsync(PromoCodeFilterDto filterDto);
+        Task<ICollection<PromoCodeDto>> GetPagedAsync(PromoCodeFilterDto filterDto, CancellationToken cancellationToken);
 
-        Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequestDto request);
+        Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequestDto request, CancellationToken cancellationToken);
     }
 }

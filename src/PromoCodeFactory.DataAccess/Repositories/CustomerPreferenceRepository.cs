@@ -1,13 +1,11 @@
-﻿using EntityFrameWorkCore;
-using Microsoft.EntityFrameworkCore;
-using PromoCodeFactory.Core.Domain.PromoCodeManagement;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using EntityFrameWorkCore;
+using Microsoft.EntityFrameworkCore;
+using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 
 namespace PromoCodeFactory.DataAccess.Repositories
 {
@@ -23,12 +21,12 @@ namespace PromoCodeFactory.DataAccess.Repositories
         public async Task AddPreferenceToCustomerAsync(CustomerPreference customerPreference, CancellationToken cancellationToken)
         {
             var exists = await _context.CustomerPreferences
-                .AnyAsync(cp => cp.CustomerId == customerPreference.CustomerId && cp.PreferenceId == customerPreference.PreferenceId);
+                .AnyAsync(cp => cp.CustomerId == customerPreference.CustomerId && cp.PreferenceId == customerPreference.PreferenceId, cancellationToken: cancellationToken);
 
             if (!exists)
             {
                 _context.CustomerPreferences.Add(customerPreference);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
             else
             {
@@ -37,26 +35,26 @@ namespace PromoCodeFactory.DataAccess.Repositories
 
         }
 
-        public async Task<List<Customer>> GetCustomersByPreferenceAsync(Guid preferenceId, CancellationToken cancellationToken)
+        public Task<List<Customer>> GetCustomersByPreferenceAsync(Guid preferenceId, CancellationToken cancellationToken)
         {
-            return await _context.CustomerPreferences
-             .Where(cp => cp.PreferenceId == preferenceId)
-             .Select(cp => cp.Customer)
-             .ToListAsync();
+            return _context.CustomerPreferences
+                .Where(cp => cp.PreferenceId == preferenceId)
+                .Select(cp => cp.Customer)
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<List<Preference>> GetPreferencesByCustomerAsync(Guid customerId, CancellationToken cancellationToken)
+        public Task<List<Preference>> GetPreferencesByCustomerAsync(Guid customerId, CancellationToken cancellationToken)
         {
-            return await _context.CustomerPreferences
-              .Where(cp => cp.CustomerId == customerId)
-              .Select(cp => cp.Preference)
-              .ToListAsync();
+            return _context.CustomerPreferences
+                .Where(cp => cp.CustomerId == customerId)
+                .Select(cp => cp.Preference)
+                .ToListAsync(cancellationToken);
         }
 
-        public async Task<CustomerPreference> GetCustomerPreference(Guid customerId, Guid preferenceId)
+        public Task<CustomerPreference> GetCustomerPreference(Guid customerId, Guid preferenceId)
         {
-            return await _context.CustomerPreferences
-            .FirstOrDefaultAsync(cp => cp.CustomerId == customerId && cp.PreferenceId == preferenceId);
+            return _context.CustomerPreferences
+                .FirstOrDefaultAsync(cp => cp.CustomerId == customerId && cp.PreferenceId == preferenceId);
         }
 
 
@@ -64,12 +62,12 @@ namespace PromoCodeFactory.DataAccess.Repositories
         public async Task RemovePreferenceFromCustomerAsync(Guid customerId, Guid preferenceId, CancellationToken cancellationToken)
         {
             var customerPreference = await _context.CustomerPreferences
-             .FirstOrDefaultAsync(cp => cp.CustomerId == customerId && cp.PreferenceId == preferenceId);
+             .FirstOrDefaultAsync(cp => cp.CustomerId == customerId && cp.PreferenceId == preferenceId, cancellationToken);
 
             if (customerPreference != null)
             {
                 _context.CustomerPreferences.Remove(customerPreference);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
             }
         }
     }

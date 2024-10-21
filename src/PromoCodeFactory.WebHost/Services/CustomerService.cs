@@ -1,16 +1,13 @@
-﻿using System.Threading.Tasks;
-using System.Threading;
-using System;
-using PromoCodeFactory.DataAccess.Repositories;
-using AutoMapper;
+﻿using System;
 using System.Collections.Generic;
-using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using System.Linq;
-using PromoCodeFactory.WebHost.Models;
+using System.Threading;
+using System.Threading.Tasks;
+using AutoMapper;
+using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts;
-using Microsoft.EntityFrameworkCore;
-using PromoCodeFactory.DataAccess.Contracts.PromoCodes;
 using PromoCodeFactory.DataAccess.Contracts.Preferences;
+using PromoCodeFactory.DataAccess.Repositories;
 
 namespace PromoCodeFactory.WebHost.Services
 {
@@ -18,27 +15,21 @@ namespace PromoCodeFactory.WebHost.Services
     {
         private readonly IMapper _mapper;
         private readonly ICustomerRepository _customerRepository;
-        private readonly IPreferenceRepository _preferenceRepository;
-        private readonly IPromoCodeRepository _promoCodeRepository;
         private readonly ICustomerPreferenceRepository _customerPreferenceRepository;
 
         public CustomerService(
             IMapper mapper,
             ICustomerRepository courseRepository,
-            IPreferenceRepository preferenceRepository,
-            ICustomerPreferenceRepository customerPreferenceRepository,
-            IPromoCodeRepository promoCodeRepository)
+            ICustomerPreferenceRepository customerPreferenceRepository)
         {
             _mapper = mapper;
             _customerRepository = courseRepository;
-            _preferenceRepository = preferenceRepository;
             _customerPreferenceRepository = customerPreferenceRepository;
-            _promoCodeRepository = promoCodeRepository;
         }
 
-        async Task<CustomerDto> ICustomerService.GetByIdAsync(Guid id)
+        async Task<CustomerDto> ICustomerService.GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            var customer = await _customerRepository.GetByIdAsync(id, default);
+            var customer = await _customerRepository.GetByIdAsync(id, cancellationToken);
 
             return _mapper.Map<Customer, CustomerDto>(customer);
         }
@@ -48,14 +39,14 @@ namespace PromoCodeFactory.WebHost.Services
         /// </summary>
         /// <param name="creatingCustomerDto"></param>
         /// <returns></returns>
-        public async Task<CustomerResponseDto> CreateAsync(CreateOrEditCustomerRequestDto creatingCustomerDto)
+        public async Task<CustomerResponseDto> CreateAsync(CreateOrEditCustomerRequestDto creatingCustomerDto, CancellationToken cancellationToken)
         {
             var customer        = _mapper.Map<CreateOrEditCustomerRequestDto, Customer>(creatingCustomerDto);
-            var createdCustomer = await _customerRepository.AddAsync(customer, default);
-                 
-            await _customerRepository.SaveChangesAsync(default);
+            var createdCustomer = await _customerRepository.AddAsync(customer, cancellationToken);
 
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(createdCustomer.Id, default);
+            await _customerRepository.SaveChangesAsync(cancellationToken);
+
+            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(createdCustomer.Id, cancellationToken);
 
             return new CustomerResponseDto()
             {
@@ -71,9 +62,9 @@ namespace PromoCodeFactory.WebHost.Services
             };
         }
 
-        public async Task<CustomerResponseDto> UpdateAsync(Guid id, CreateOrEditCustomerRequestDto updatingCustomerDto)
+        public async Task<CustomerResponseDto> UpdateAsync(Guid id, CreateOrEditCustomerRequestDto updatingCustomerDto, CancellationToken cancellationToken)
         {
-            var customer = await _customerRepository.GetByIdAsync(id, default);
+            var customer = await _customerRepository.GetByIdAsync(id, cancellationToken);
 
             if (customer == null)
             {
@@ -83,11 +74,11 @@ namespace PromoCodeFactory.WebHost.Services
             customer.FirstName = !string.IsNullOrWhiteSpace(updatingCustomerDto.FirstName) ? updatingCustomerDto.FirstName : customer.FirstName;
             customer.LastName = !string.IsNullOrWhiteSpace(updatingCustomerDto.LastName) ? updatingCustomerDto.LastName : customer.LastName;
             customer.Email    = !string.IsNullOrWhiteSpace(updatingCustomerDto.Email) ? updatingCustomerDto.Email : customer.Email;
-           
-            _customerRepository.Update(customer);
-            await _customerRepository.SaveChangesAsync(default);
 
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id, default);
+            _customerRepository.Update(customer);
+            await _customerRepository.SaveChangesAsync(cancellationToken);
+
+            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id, cancellationToken);
 
             return new CustomerResponseDto()
             {
@@ -102,24 +93,24 @@ namespace PromoCodeFactory.WebHost.Services
                 }).ToList()
             };
         }
-      
-        async Task ICustomerService.DeleteAsync(Guid id)
+
+        async Task ICustomerService.DeleteAsync(Guid id, CancellationToken cancellationToken)
         {
-            var customer = await _customerRepository.GetByIdAsync(id, default);
+            var customer = await _customerRepository.GetByIdAsync(id, cancellationToken);
 
             if (customer == null)
             {
                 throw new Exception($"Клиент с идентфикатором {id} не найден");
-            }            
+            }
 
             _customerRepository.Delete(id);
 
-            await _customerRepository.SaveChangesAsync(default);
+            await _customerRepository.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<ICollection<CustomerDto>> GetPagedAsync(CustomerFilterDto filterDto)
+        public async Task<ICollection<CustomerDto>> GetPagedAsync(CustomerFilterDto filterDto, CancellationToken cancellationToken)
         {
-            ICollection<Customer> entities = await _customerRepository.GetPagedAsync(filterDto);
+            ICollection<Customer> entities = await _customerRepository.GetPagedAsync(filterDto, cancellationToken);
             return _mapper.Map<ICollection<Customer>, ICollection<CustomerDto>>(entities);
         }
 
