@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using PromoCodeFactory.DataAccess.Contracts.PromoCodes;
 using PromoCodeFactory.WebHost.Models;
 using PromoCodeFactory.WebHost.Models.PromoCodes;
+using PromoCodeFactory.WebHost.Models.Request;
+using PromoCodeFactory.WebHost.Models.Response;
 using PromoCodeFactory.WebHost.Services.PromoCodes;
 
 namespace PromoCodeFactory.WebHost.Controllers
@@ -25,27 +27,27 @@ namespace PromoCodeFactory.WebHost.Controllers
             _service = service;
             _mapper = mapper;
         }
-
         /// <summary>
         /// Получение списка промокодов
         /// </summary>
-        /// <param name="filterModel"><СustomerFilterModel/param>
+        /// <param name="request">PromoCodeFilterRequest</param>
         /// <returns></returns>
         [HttpPost("list")]
-        public async Task<ActionResult<PromoCodeModel>> GetCustomersAsync(PromoCodeFilterModel filterModel)
+        public async Task<ActionResult<PromoCodeResponse>> GetPromoCodesAsync(PromoCodeFilterRequest request)
         {
-            var filterDto = _mapper.Map<PromoCodeFilterModel, PromoCodeFilterDto>(filterModel);
-            return Ok(_mapper.Map<List<CustomerModel>>(await _service.GetPagedAsync(filterDto, HttpContext.RequestAborted)));
+            var filterModel = _mapper.Map<PromoCodeFilterRequest, PromoCodeFilterModel>(request);
+            return Ok(_mapper.Map<List<PromoCodeResponse>>(await _service.GetPagedAsync(filterModel, HttpContext.RequestAborted)));
         }
 
         /// <summary>
-        /// Создать промокод и выдать его клиентам с указанным предпочтением
+        /// Выдать промокод
         /// </summary>
+        /// <param name="request">GivePromoCodeRequest</param>
         /// <returns></returns>
         [HttpPost]
         public Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequest request)
         {
-            return _service.GivePromoCodesToCustomersWithPreferenceAsync(_mapper.Map<GivePromoCodeRequestDto>(request), HttpContext.RequestAborted);
+            return _service.GivePromoCodesToCustomersWithPreferenceAsync(_mapper.Map<GivePromoCodeModel>(request), HttpContext.RequestAborted);
         }
     }
 }

@@ -1,9 +1,8 @@
-﻿using PromoCodeFactory.Core.Domain.PromoCodeManagement;
-using System;
+﻿using System;
 
 namespace PromoCodeFactory.WebHost.Models.PromoCodes
 {
-    public class GivePromoCodeRequest
+    public class GivePromoCodeModel
     {
         public required string ServiceInfo { get; init; }
         public required string PromoCode { get; init; }

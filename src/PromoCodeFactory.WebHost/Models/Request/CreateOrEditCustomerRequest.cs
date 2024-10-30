@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace PromoCodeFactory.WebHost.Models
+namespace PromoCodeFactory.WebHost.Models.Request
 {
     public class CreateOrEditCustomerRequest
     {
@@ -12,7 +12,6 @@ namespace PromoCodeFactory.WebHost.Models
         public required string LastName { get; init; }
         [Required]
         public required string Email { get; init; }
-        [Required]
         public List<Guid> PreferenceIds { get; init; }
     }
 }

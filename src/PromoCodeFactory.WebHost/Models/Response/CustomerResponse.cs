@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using PromoCodeFactory.WebHost.Models.Preferences;
 using PromoCodeFactory.WebHost.Models.PromoCodes;
 
-namespace PromoCodeFactory.WebHost.Models
+namespace PromoCodeFactory.WebHost.Models.Response
 {
     public class CustomerResponse
     {
@@ -19,6 +19,6 @@ namespace PromoCodeFactory.WebHost.Models
         [Required]
         public List<PromoCodeShortResponse> PromoCodes { get; set; }
         [Required]
-        public List<PreferencesModel> Preferences { get; set; }
+        public List<PreferencesResponse> Preferences { get; set; }
     }
 }

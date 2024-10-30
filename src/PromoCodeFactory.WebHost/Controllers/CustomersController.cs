@@ -5,6 +5,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PromoCodeFactory.DataAccess.Contracts;
 using PromoCodeFactory.WebHost.Models;
+using PromoCodeFactory.WebHost.Models.Request;
+using PromoCodeFactory.WebHost.Models.Response;
 using PromoCodeFactory.WebHost.Services;
 
 namespace PromoCodeFactory.WebHost.Controllers
@@ -31,10 +33,10 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// <param name="filterModel"><СustomerFilterModel/param>
         /// <returns></returns>
         [HttpPost("list")]
-        public async Task<ActionResult<CustomerModel>> GetCustomersAsync(СustomerFilterModel filterModel)
+        public async Task<ActionResult<CustomerShortResponse>> GetCustomersAsync(СustomerFilterRequest request)
         {
-            var filterDto = _mapper.Map<СustomerFilterModel, CustomerFilterDto>(filterModel);
-            var response = _mapper.Map<List<CustomerModel>>(await _service.GetPagedAsync(filterDto, HttpContext.RequestAborted));
+            var filterModel = _mapper.Map<СustomerFilterRequest, СustomerFilterModel>(request);
+            var response = _mapper.Map<List<CustomerShortResponse>>(await _service.GetPagedAsync(filterModel, HttpContext.RequestAborted));
             return Ok(response);
         }
 
@@ -44,9 +46,9 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<CustomerModel>> GetCustomerAsync(Guid id)
+        public async Task<ActionResult<CustomerShortResponse>> GetCustomerAsync(Guid id)
         {
-            return Ok(_mapper.Map<CustomerModel>(await _service.GetByIdAsync(id, HttpContext.RequestAborted)));
+            return Ok(_mapper.Map<CustomerShortResponse>(await _service.GetByIdAsync(id, HttpContext.RequestAborted)));
         }
 
         /// <summary>
@@ -57,7 +59,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpPost]
         public async Task<ActionResult<CustomerResponse>> CreateCustomerAsync(CreateOrEditCustomerRequest request)
         {
-            return Ok(await _service.CreateAsync(_mapper.Map<CreateOrEditCustomerRequestDto>(request), HttpContext.RequestAborted));
+            return Ok(await _service.CreateAsync(_mapper.Map<CreateOrEditCustomerModel>(request), HttpContext.RequestAborted));
         }
 
         /// <summary>
@@ -70,7 +72,7 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<CustomerResponse>> EditCustomersAsync(Guid id, CreateOrEditCustomerRequest request)
         {
-            return Ok(await _service.UpdateAsync(id, _mapper.Map<CreateOrEditCustomerRequest, CreateOrEditCustomerRequestDto>(request), HttpContext.RequestAborted));
+            return Ok(await _service.UpdateAsync(id, _mapper.Map<CreateOrEditCustomerRequest, CreateOrEditCustomerModel>(request), HttpContext.RequestAborted));
         }
 
         /// <summary>

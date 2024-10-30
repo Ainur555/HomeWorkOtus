@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
-namespace PromoCodeFactory.DataAccess.Contracts.PromoCodes
+namespace PromoCodeFactory.WebHost.Models.Response
 {
-    public class PromoCodeDto
+    public class PromoCodeResponse
     {
+        [Required]
         public required string Code { get; init; }
-
+        [Required]
         public required string ServiceInfo { get; init; }
-
+        [Required]
         public DateTime BeginDate { get; init; }
-
+        [Required]
         public DateTime EndDate { get; init; }
-
     }
 }

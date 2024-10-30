@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts;
-using PromoCodeFactory.DataAccess.Contracts.Preferences;
 using PromoCodeFactory.DataAccess.Repositories;
+using PromoCodeFactory.WebHost.Models;
 
 namespace PromoCodeFactory.WebHost.Services
 {
@@ -27,42 +27,24 @@ namespace PromoCodeFactory.WebHost.Services
             _customerPreferenceRepository = customerPreferenceRepository;
         }
 
-        async Task<CustomerDto> ICustomerService.GetByIdAsync(Guid id, CancellationToken cancellationToken)
+        async Task<Customer> ICustomerService.GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            var customer = await _customerRepository.GetByIdAsync(id, cancellationToken);
-
-            return _mapper.Map<Customer, CustomerDto>(customer);
+            return await _customerRepository.GetByIdAsync(id, cancellationToken);
         }
 
-        /// <summary>
-        /// Создание клиента
-        /// </summary>
-        /// <param name="creatingCustomerDto"></param>
-        /// <returns></returns>
-        public async Task<CustomerResponseDto> CreateAsync(CreateOrEditCustomerRequestDto creatingCustomerDto, CancellationToken cancellationToken)
+        public async Task<Customer> CreateAsync(CreateOrEditCustomerModel creatingCustomerModel, CancellationToken cancellationToken)
         {
-            var customer        = _mapper.Map<CreateOrEditCustomerRequestDto, Customer>(creatingCustomerDto);
+            var customer        = _mapper.Map<CreateOrEditCustomerModel, Customer>(creatingCustomerModel);
             var createdCustomer = await _customerRepository.AddAsync(customer, cancellationToken);
 
             await _customerRepository.SaveChangesAsync(cancellationToken);
 
             var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(createdCustomer.Id, cancellationToken);
 
-            return new CustomerResponseDto()
-            {
-                Id = createdCustomer.Id,
-                FirstName = createdCustomer.FirstName,
-                LastName = createdCustomer.LastName,
-                Email = createdCustomer.Email,
-                Preferences = preferences.Select(x => new PreferencesDto
-                {
-                    Id = x.Id,
-                    Name = x.Name
-                }).ToList()
-            };
+            return customer;
         }
 
-        public async Task<CustomerResponseDto> UpdateAsync(Guid id, CreateOrEditCustomerRequestDto updatingCustomerDto, CancellationToken cancellationToken)
+        public async Task<Customer> UpdateAsync(Guid id, CreateOrEditCustomerModel updatingCustomerDto, CancellationToken cancellationToken)
         {
             var customer = await _customerRepository.GetByIdAsync(id, cancellationToken);
 
@@ -80,18 +62,7 @@ namespace PromoCodeFactory.WebHost.Services
 
             var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id, cancellationToken);
 
-            return new CustomerResponseDto()
-            {
-                Id = customer.Id,
-                FirstName = customer.FirstName,
-                LastName = customer.LastName,
-                Email = customer.Email,
-                Preferences = preferences.Select(x => new PreferencesDto
-                {
-                    Id = x.Id,
-                    Name = x.Name
-                }).ToList()
-            };
+            return customer;
         }
 
         async Task ICustomerService.DeleteAsync(Guid id, CancellationToken cancellationToken)
@@ -108,12 +79,9 @@ namespace PromoCodeFactory.WebHost.Services
             await _customerRepository.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<ICollection<CustomerDto>> GetPagedAsync(CustomerFilterDto filterDto, CancellationToken cancellationToken)
+        public async Task<ICollection<Customer>> GetPagedAsync(СustomerFilterModel filterModel, CancellationToken cancellationToken)
         {
-            ICollection<Customer> entities = await _customerRepository.GetPagedAsync(filterDto, cancellationToken);
-            return _mapper.Map<ICollection<Customer>, ICollection<CustomerDto>>(entities);
+            return await _customerRepository.GetPagedAsync(_mapper.Map<СustomerFilterModel, CustomerFilterDto>(filterModel), cancellationToken);
         }
-
-
     }
 }
