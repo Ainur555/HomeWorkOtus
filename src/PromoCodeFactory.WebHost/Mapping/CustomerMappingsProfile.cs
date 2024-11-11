@@ -35,11 +35,9 @@ namespace PromoCodeFactory.WebHost.Mapping
             .ForMember(c => c.Id, opt => opt.Ignore());
 
             CreateMap<Customer, CustomerResponse>()
-                  .ForMember(dest => dest.PromoCodes, opt => opt.MapFrom(src => src.PromoCodes))
-                  .ForMember(dest => dest.Preferences, opt => opt.MapFrom(src => src.Preferences));
+                  .ForMember(dest => dest.PromoCodes, opt => opt.MapFrom(src => src.PromoCodes));
 
-            CreateMap<Customer, CustomerShortResponse>()
-                .ForMember(dest => dest.PromoCodes, opt => opt.MapFrom(src => src.PromoCodes));
+            CreateMap<Customer, CustomerShortResponse>();
 
 
         }

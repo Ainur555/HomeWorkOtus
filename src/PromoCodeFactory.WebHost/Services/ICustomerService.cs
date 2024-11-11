@@ -46,5 +46,12 @@ namespace PromoCodeFactory.WebHost.Services
         /// <param name="cancellationToken"> cancellationToken </param>
         /// <returns> Список клиентов. </returns>
         Task<ICollection<Customer>> GetPagedAsync(СustomerFilterModel filterModel, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Получить всех клиентов
+        /// </summary>
+        /// <param name="cancellationToken"> cancellationToken </param>
+        /// <returns>Список клиентов</returns>
+        Task<List<Customer>> GetAllAsync(CancellationToken cancellationToken);
     }
 }

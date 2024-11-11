@@ -13,13 +13,22 @@ namespace PromoCodeFactory.DataAccess.Repositories
     {
         public Task<List<Employee>> GetPagedAsync(EmployeeFilterDto filterDto, CancellationToken cancellationToken)
         {
-            var query = GetAll();
+            var query = GetAll();           
 
-            query = query.Where(c => c.FirstName == filterDto.FirstName);
+            if (!string.IsNullOrEmpty(filterDto.FirstName))
+            {
+                query = query.Where(c => c.FirstName == filterDto.FirstName);
+            }
 
-            query = query.Where(c => c.Email == filterDto.Email);
+            if (!string.IsNullOrEmpty(filterDto.LastName))
+            {
+                query = query.Where(c => c.LastName == filterDto.LastName);
+            }
 
-            query = query.Where(c => c.LastName == filterDto.LastName);
+            if (!string.IsNullOrEmpty(filterDto.Email))
+            {
+                query = query.Where(c => c.Email == filterDto.Email);
+            }
 
             query = query
                 .Skip((filterDto.Page - 1) * filterDto.ItemsPerPage)

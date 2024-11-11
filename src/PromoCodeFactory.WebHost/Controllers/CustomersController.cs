@@ -28,6 +28,18 @@ namespace PromoCodeFactory.WebHost.Controllers
         }
 
         /// <summary>
+        /// Получение всех клиентов
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("AllCustomers")]
+        public async Task<ActionResult<CustomerShortResponse>> GetAllAsync()
+        {
+            var customers = await _service.GetAllAsync(HttpContext.RequestAborted);
+            var response = _mapper.Map<List<CustomerShortResponse>>(customers);
+            return Ok(response);
+        }
+
+        /// <summary>
         /// Получение списка клиентов
         /// </summary>
         /// <param name="filterModel"><СustomerFilterModel/param>
@@ -46,9 +58,11 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<CustomerShortResponse>> GetCustomerAsync(Guid id)
+        public async Task<ActionResult<CustomerResponse>> GetCustomerAsync(Guid id)
         {
-            return Ok(_mapper.Map<CustomerShortResponse>(await _service.GetByIdAsync(id, HttpContext.RequestAborted)));
+            var customer = await _service.GetByIdAsync(id, HttpContext.RequestAborted);
+
+            return Ok(_mapper.Map<CustomerResponse>(customer));
         }
 
         /// <summary>

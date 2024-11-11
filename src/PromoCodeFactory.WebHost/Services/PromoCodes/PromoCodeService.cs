@@ -62,5 +62,10 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
 
             await _promocodeRepository.SaveChangesAsync(cancellationToken);
         }
+
+        public async Task<List<PromoCode>> GetAllAsync(CancellationToken cancellationToken)
+        {
+            return await _promocodeRepository.GetAllAsync(cancellationToken);
+        }
     }
 }

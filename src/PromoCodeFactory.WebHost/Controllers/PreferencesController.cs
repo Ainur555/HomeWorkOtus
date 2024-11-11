@@ -37,5 +37,17 @@ namespace PromoCodeFactory.WebHost.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// Получение всех предпочтений
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("AllPreferences")]
+        public async Task<ActionResult<PreferencesResponse>> GetAllAsync()
+        {
+            var preferences = await _service.GetAllAsync(HttpContext.RequestAborted);
+            var response = _mapper.Map<List<PreferencesResponse>>(preferences);
+            return Ok(response);
+        }
+
     }
 }

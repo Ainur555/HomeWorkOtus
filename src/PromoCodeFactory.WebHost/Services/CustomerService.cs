@@ -29,7 +29,7 @@ namespace PromoCodeFactory.WebHost.Services
 
         async Task<Customer> ICustomerService.GetByIdAsync(Guid id, CancellationToken cancellationToken)
         {
-            return await _customerRepository.GetByIdAsync(id, cancellationToken);
+            return await _customerRepository.GetByIdAsync(id, cancellationToken, nameof(Customer.PromoCodes));
         }
 
         public async Task<Customer> CreateAsync(CreateOrEditCustomerModel creatingCustomerModel, CancellationToken cancellationToken)
@@ -82,6 +82,11 @@ namespace PromoCodeFactory.WebHost.Services
         public async Task<ICollection<Customer>> GetPagedAsync(СustomerFilterModel filterModel, CancellationToken cancellationToken)
         {
             return await _customerRepository.GetPagedAsync(_mapper.Map<СustomerFilterModel, CustomerFilterDto>(filterModel), cancellationToken);
+        }
+
+        public async Task<List<Customer>> GetAllAsync(CancellationToken cancellationToken)
+        {
+            return await _customerRepository.GetAllAsync(cancellationToken);
         }
     }
 }

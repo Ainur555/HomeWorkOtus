@@ -16,5 +16,12 @@ namespace PromoCodeFactory.WebHost.Services.Preferences
         /// <param name="cancellationToken"> токен отмена </param>
         /// <returns> Список предпочтений. </returns>
         Task<ICollection<Preference>> GetPagedAsync(PreferencesFilterModel filterModel, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Получить все предпочтения
+        /// </summary>
+        /// <param name="cancellationToken"> cancellationToken </param>
+        /// <returns>Список предпочтений</returns>
+        Task<List<Preference>> GetAllAsync(CancellationToken cancellationToken);
     }
 }

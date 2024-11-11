@@ -23,6 +23,11 @@ namespace PromoCodeFactory.WebHost.Services.Preferences
             _preferenceRepository = preferenceRepository;
         }
 
+        public async Task<List<Preference>> GetAllAsync(CancellationToken cancellationToken)
+        {
+            return await _preferenceRepository.GetAllAsync(cancellationToken);
+        }
+
         public async Task<ICollection<Preference>> GetPagedAsync(PreferencesFilterModel filterModel, CancellationToken cancellationToken)
         {
             return await _preferenceRepository.GetPagedAsync(_mapper.Map<PreferencesFilterModel, PreferencesFilterDto>(filterModel), cancellationToken);

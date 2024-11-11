@@ -49,5 +49,17 @@ namespace PromoCodeFactory.WebHost.Controllers
         {
             return _service.GivePromoCodesToCustomersWithPreferenceAsync(_mapper.Map<GivePromoCodeModel>(request), HttpContext.RequestAborted);
         }
+
+        /// <summary>
+        /// Получение всех промокодов
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("AllPromocodes")]
+        public async Task<ActionResult<PromoCodeResponse>> GetAllAsync()
+        {
+            var promoCodes = await _service.GetAllAsync(HttpContext.RequestAborted);
+            var response = _mapper.Map<List<PromoCodeResponse>>(promoCodes);
+            return Ok(response);
+        }
     }
 }

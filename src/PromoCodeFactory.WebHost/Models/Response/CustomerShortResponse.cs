@@ -15,7 +15,5 @@ namespace PromoCodeFactory.WebHost.Models.Response
         [Required]
         public required string Email { get; init; }
 
-        [Required]
-        public List<PromoCodeResponse> PromoCodes { get; init; }
     }
 }

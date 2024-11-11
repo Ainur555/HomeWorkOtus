@@ -18,7 +18,5 @@ namespace PromoCodeFactory.WebHost.Models.Response
 
         [Required]
         public List<PromoCodeShortResponse> PromoCodes { get; set; }
-        [Required]
-        public List<PreferencesResponse> Preferences { get; set; }
     }
 }
