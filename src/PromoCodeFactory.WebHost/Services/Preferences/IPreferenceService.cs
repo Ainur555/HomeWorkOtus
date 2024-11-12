@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts;
-using PromoCodeFactory.DataAccess.Contracts.Preferences;
+using PromoCodeFactory.WebHost.Models.Preferences;
 
 namespace PromoCodeFactory.WebHost.Services.Preferences
 {
@@ -11,8 +12,16 @@ namespace PromoCodeFactory.WebHost.Services.Preferences
         /// <summary>
         /// Получить постраничный список.
         /// </summary>
-        /// <param name="filterDto"> ДТО фильтра. </param>
+        /// <param name="filterModel"> модель фильтра </param>
+        /// <param name="cancellationToken"> токен отмена </param>
         /// <returns> Список предпочтений. </returns>
-        Task<ICollection<PreferencesDto>> GetPagedAsync(PreferencesFilterDto filterDto, CancellationToken cancellationToken);
+        Task<ICollection<Preference>> GetPagedAsync(PreferencesFilterModel filterModel, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Получить все предпочтения
+        /// </summary>
+        /// <param name="cancellationToken"> cancellationToken </param>
+        /// <returns>Список предпочтений</returns>
+        Task<List<Preference>> GetAllAsync(CancellationToken cancellationToken);
     }
 }

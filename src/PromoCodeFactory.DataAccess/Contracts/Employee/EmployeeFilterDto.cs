@@ -8,9 +8,9 @@ namespace PromoCodeFactory.DataAccess.Contracts.Employee
 {
     public class EmployeeFilterDto
     {
-        public required string FirstName { get; init; }
-        public required string LastName { get; init; }
-        public required string Email { get; init; }
+        public  string FirstName { get; init; }
+        public  string LastName { get; init; }
+        public  string Email { get; init; }
         public int ItemsPerPage { get; init; }
         public int Page { get; init; }
     }

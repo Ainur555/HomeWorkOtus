@@ -23,12 +23,21 @@ namespace PromoCodeFactory.DataAccess.Repositories
         {
             var query = GetAll();
 
-            query = query.Where(c => c.PartnerName == filterDto.PartnerName);
+            if (!string.IsNullOrEmpty(filterDto.PartnerName))
+            {
+                query = query.Where(c => c.PartnerName == filterDto.PartnerName);
+            }
 
-            query = query.Where(c => c.ServiceInfo == filterDto.ServiceInfo);
+            if (!string.IsNullOrEmpty(filterDto.ServiceInfo))
+            {
+                query = query.Where(c => c.ServiceInfo == filterDto.ServiceInfo);
+            }
 
-            query = query.Where(c => c.Code == filterDto.Code);
-
+            if (!string.IsNullOrEmpty(filterDto.Code))
+            {
+                query = query.Where(c => c.Code == filterDto.Code);
+            }
+       
             query = query
                 .Skip((filterDto.Page - 1) * filterDto.ItemsPerPage)
                 .Take(filterDto.ItemsPerPage);

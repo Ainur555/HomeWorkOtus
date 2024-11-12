@@ -2,10 +2,12 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts;
-using PromoCodeFactory.DataAccess.Contracts.Preferences;
 using PromoCodeFactory.DataAccess.Repositories;
+using PromoCodeFactory.WebHost.Models;
+using PromoCodeFactory.WebHost.Models.Preferences;
 
 namespace PromoCodeFactory.WebHost.Services.Preferences
 {
@@ -21,10 +23,14 @@ namespace PromoCodeFactory.WebHost.Services.Preferences
             _preferenceRepository = preferenceRepository;
         }
 
-        public async Task<ICollection<PreferencesDto>> GetPagedAsync(PreferencesFilterDto filterDto, CancellationToken cancellationToken)
+        public async Task<List<Preference>> GetAllAsync(CancellationToken cancellationToken)
         {
-            ICollection<Preference> entities = await _preferenceRepository.GetPagedAsync(filterDto, cancellationToken);
-            return _mapper.Map<ICollection<Preference>, ICollection<PreferencesDto>>(entities);
+            return await _preferenceRepository.GetAllAsync(cancellationToken);
+        }
+
+        public async Task<ICollection<Preference>> GetPagedAsync(PreferencesFilterModel filterModel, CancellationToken cancellationToken)
+        {
+            return await _preferenceRepository.GetPagedAsync(_mapper.Map<PreferencesFilterModel, PreferencesFilterDto>(filterModel), cancellationToken);
         }
     }
 }

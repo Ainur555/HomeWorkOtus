@@ -3,9 +3,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using PromoCodeFactory.Core.Domain.PromoCodeManagement;
+using PromoCodeFactory.DataAccess.Contracts;
 using PromoCodeFactory.DataAccess.Contracts.PromoCodes;
 using PromoCodeFactory.DataAccess.Repositories;
 using PromoCodeFactory.WebHost.Helpers;
+using PromoCodeFactory.WebHost.Models;
+using PromoCodeFactory.WebHost.Models.PromoCodes;
 
 namespace PromoCodeFactory.WebHost.Services.PromoCodes
 {
@@ -31,27 +34,26 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
             _mapper = mapper;
         }
 
-        public async Task<ICollection<PromoCodeDto>> GetPagedAsync(PromoCodeFilterDto filterDto, CancellationToken cancellationToken)
+        public async Task<ICollection<PromoCode>> GetPagedAsync(PromoCodeFilterModel filterModel, CancellationToken cancellationToken)
         {
-            ICollection<PromoCode> entities = await _promocodeRepository.GetPagedAsync(filterDto, cancellationToken);
-            return _mapper.Map<ICollection<PromoCode>, ICollection<PromoCodeDto>>(entities);
+            return await _promocodeRepository.GetPagedAsync(_mapper.Map<PromoCodeFilterModel, PromoCodeFilterDto>(filterModel), cancellationToken); 
         }
 
-        public async Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequestDto request, CancellationToken cancellationToken)
+        public async Task GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeModel givePromoCodeModel, CancellationToken cancellationToken)
         {
-            var employee = await _employeeRepository.GetByIdAsync(request.EmployeeId, cancellationToken);
-            var preference = await _preferenceRepository.GetByIdAsync(request.PreferenceId, cancellationToken);
-            var customers = await _customerPreferenceRepository.GetCustomersByPreferenceAsync(request.PreferenceId, cancellationToken);
+            var employee = await _employeeRepository.GetByIdAsync(givePromoCodeModel.EmployeeId, cancellationToken);
+            var preference = await _preferenceRepository.GetByIdAsync(givePromoCodeModel.PreferenceId, cancellationToken);
+            var customers = await _customerPreferenceRepository.GetCustomersByPreferenceAsync(givePromoCodeModel.PreferenceId, cancellationToken);
 
             foreach (var customer in customers)
             {
                 await _promocodeRepository.AddAsync(new PromoCode
                 {
-                    ServiceInfo = request.ServiceInfo,
-                    PartnerName = request.PartnerName,
-                    Code = request.PromoCode,
-                    BeginDate = request.BeginDate.ToDateTime(),
-                    EndDate = request.EndDate.ToDateTime(),
+                    ServiceInfo = givePromoCodeModel.ServiceInfo,
+                    PartnerName = givePromoCodeModel.PartnerName,
+                    Code = givePromoCodeModel.PromoCode,
+                    BeginDate = givePromoCodeModel.BeginDate.ToDateTime(),
+                    EndDate = givePromoCodeModel.EndDate.ToDateTime(),
                     Preference = preference,
                     PartnerManager = employee,
                     Customer = customer,
@@ -59,6 +61,11 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
             }
 
             await _promocodeRepository.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task<List<PromoCode>> GetAllAsync(CancellationToken cancellationToken)
+        {
+            return await _promocodeRepository.GetAllAsync(cancellationToken);
         }
     }
 }

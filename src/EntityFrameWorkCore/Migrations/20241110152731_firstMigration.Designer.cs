@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameWorkCore.Migrations
 {
     [DbContext(typeof(EfDbContext))]
-    [Migration("20241006120220_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20241110152731_firstMigration")]
+    partial class firstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,7 +44,7 @@ namespace EntityFrameWorkCore.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("RoleId")
+                    b.Property<Guid>("RoleId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -82,7 +82,7 @@ namespace EntityFrameWorkCore.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(100)
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
@@ -119,9 +119,11 @@ namespace EntityFrameWorkCore.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasColumnName("PreferenceId");
 
                     b.Property<string>("Name")
+                        .HasMaxLength(32)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -143,20 +145,20 @@ namespace EntityFrameWorkCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("CustomerId")
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EmployeeId")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("EndDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("PartnerManagerId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PartnerName")
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("PreferenceId")
+                    b.Property<Guid>("PreferenceId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ServiceInfo")
@@ -167,7 +169,7 @@ namespace EntityFrameWorkCore.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.HasIndex("PartnerManagerId");
+                    b.HasIndex("EmployeeId");
 
                     b.HasIndex("PreferenceId");
 
@@ -178,7 +180,9 @@ namespace EntityFrameWorkCore.Migrations
                 {
                     b.HasOne("PromoCodeFactory.Core.Domain.Administration.Role", "Role")
                         .WithMany()
-                        .HasForeignKey("RoleId");
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Role");
                 });
@@ -194,7 +198,7 @@ namespace EntityFrameWorkCore.Migrations
                     b.HasOne("PromoCodeFactory.Core.Domain.PromoCodeManagement.Preference", "Preference")
                         .WithMany()
                         .HasForeignKey("PreferenceId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -206,15 +210,21 @@ namespace EntityFrameWorkCore.Migrations
                 {
                     b.HasOne("PromoCodeFactory.Core.Domain.PromoCodeManagement.Customer", "Customer")
                         .WithMany("PromoCodes")
-                        .HasForeignKey("CustomerId");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PromoCodeFactory.Core.Domain.Administration.Employee", "PartnerManager")
-                        .WithMany()
-                        .HasForeignKey("PartnerManagerId");
+                        .WithMany("PromoCodes")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PromoCodeFactory.Core.Domain.PromoCodeManagement.Preference", "Preference")
-                        .WithMany()
-                        .HasForeignKey("PreferenceId");
+                        .WithMany("Promocodes")
+                        .HasForeignKey("PreferenceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Customer");
 
@@ -223,11 +233,21 @@ namespace EntityFrameWorkCore.Migrations
                     b.Navigation("Preference");
                 });
 
+            modelBuilder.Entity("PromoCodeFactory.Core.Domain.Administration.Employee", b =>
+                {
+                    b.Navigation("PromoCodes");
+                });
+
             modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.Customer", b =>
                 {
                     b.Navigation("Preferences");
 
                     b.Navigation("PromoCodes");
+                });
+
+            modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.Preference", b =>
+                {
+                    b.Navigation("Promocodes");
                 });
 #pragma warning restore 612, 618
         }

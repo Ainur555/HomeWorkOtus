@@ -1,9 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System;
 
-namespace PromoCodeFactory.WebHost.Models
+namespace PromoCodeFactory.WebHost.Models.Request
 {
-    public class СustomerFilterModel
+    public class СustomerFilterRequest
     {
         public string FirstName { get; init; }
         public string LastName { get; init; }

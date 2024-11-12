@@ -4,6 +4,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PromoCodeFactory.DataAccess.Contracts;
 using PromoCodeFactory.WebHost.Models.Preferences;
+using PromoCodeFactory.WebHost.Models.Request;
+using PromoCodeFactory.WebHost.Models.Response;
 using PromoCodeFactory.WebHost.Services.Preferences;
 
 namespace PromoCodeFactory.WebHost.Controllers
@@ -24,13 +26,26 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// <summary>
         /// Получение списка предпочтений
         /// </summary>
-        /// <param name="filterModel"><СustomerFilterModel/param>
+        /// <param name="filterModel"><PreferencesFilterRequest/param>
         /// <returns></returns>
         [HttpPost("list")]
-        public async Task<ActionResult<PreferencesModel>> GetCustomersAsync(PreferencesFilterModel filterModel)
+        public async Task<ActionResult<PreferencesResponse>> GetPreferencesAsync(PreferencesFilterRequest request)
         {
-            var filterDto = _mapper.Map<PreferencesFilterModel, PreferencesFilterDto>(filterModel);
-            var response = _mapper.Map<List<PreferencesModel>>(await _service.GetPagedAsync(filterDto, HttpContext.RequestAborted));
+            var filterModel = _mapper.Map<PreferencesFilterRequest, PreferencesFilterModel>(request);
+            var response    = _mapper.Map<List<PreferencesResponse>>(await _service.GetPagedAsync(filterModel, HttpContext.RequestAborted));
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Получение всех предпочтений
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("AllPreferences")]
+        public async Task<ActionResult<PreferencesResponse>> GetAllAsync()
+        {
+            var preferences = await _service.GetAllAsync(HttpContext.RequestAborted);
+            var response = _mapper.Map<List<PreferencesResponse>>(preferences);
             return Ok(response);
         }
 
