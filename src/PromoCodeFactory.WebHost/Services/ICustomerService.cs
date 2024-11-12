@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using PromoCodeFactory.Core.Domain.PromoCodeManagement;
 using PromoCodeFactory.DataAccess.Contracts;
+using PromoCodeFactory.WebHost.Models;
 
 namespace PromoCodeFactory.WebHost.Services
 {
@@ -12,33 +14,44 @@ namespace PromoCodeFactory.WebHost.Services
         /// Получить клиента
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
-        /// <returns> ДТО клиента. </returns>
-        Task<CustomerDto> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+        /// <param name="cancellationToken"> cancellationToken </param>
+        /// <returns> клиент </returns>
+        Task<Customer> GetByIdAsync(Guid id, CancellationToken cancellationToken);
 
         /// <summary>
         /// Создать клиента
         /// </summary>
-        /// <param name="creatingCustomerDto"> ДТО создаваемого клиента. </param>
-        Task<CustomerResponseDto> CreateAsync(CreateOrEditCustomerRequestDto creatingCustomerDto, CancellationToken cancellationToken);
+        /// <param name="creatingCustomerModel"> Модель редактируемого клиента. </param>
+        /// <param name="cancellationToken"> cancellationToken </param>
+        Task<Customer> CreateAsync(CreateOrEditCustomerModel creatingCustomerModel, CancellationToken cancellationToken);
 
         /// <summary>
         /// Изменить клиента
         /// </summary>
         /// <param name="id"> Иентификатор. </param>
-        /// <param name="updatingCustomerDto"> ДТО редактируемого клиента. </param>
-        Task<CustomerResponseDto> UpdateAsync(Guid id, CreateOrEditCustomerRequestDto updatingCustomerDto, CancellationToken cancellationToken);
+        /// <param name="updatingCustomerModel"> Модель редактируемого клиента. </param>
+        Task<Customer> UpdateAsync(Guid id, CreateOrEditCustomerModel updatingCustomerModel, CancellationToken cancellationToken);
 
         /// <summary>
         /// Удалить клиента
         /// </summary>
         /// <param name="id"> Идентификатор. </param>
+        /// <param name="cancellationToken"> cancellationToken </param>
         Task DeleteAsync(Guid id, CancellationToken cancellationToken);
 
         /// <summary>
         /// Получить постраничный список.
         /// </summary>
-        /// <param name="filterDto"> ДТО фильтра. </param>
+        /// <param name="filterModel"> модель фильтра </param>
+        /// <param name="cancellationToken"> cancellationToken </param>
         /// <returns> Список клиентов. </returns>
-        Task<ICollection<CustomerDto>> GetPagedAsync(CustomerFilterDto filterDto, CancellationToken cancellationToken);
+        Task<ICollection<Customer>> GetPagedAsync(СustomerFilterModel filterModel, CancellationToken cancellationToken);
+
+        /// <summary>
+        /// Получить всех клиентов
+        /// </summary>
+        /// <param name="cancellationToken"> cancellationToken </param>
+        /// <returns>Список клиентов</returns>
+        Task<List<Customer>> GetAllAsync(CancellationToken cancellationToken);
     }
 }

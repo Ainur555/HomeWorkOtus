@@ -11,7 +11,7 @@ namespace PromoCodeFactory.Core.Abstractions.Repositories
     {
         Task<List<T>> GetAllAsync(CancellationToken cancellationToken);
         IQueryable<T> GetAll();
-        Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken);
+        Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken, string includes = null);
         Task<T> AddAsync(T entity, CancellationToken cancellationToken);
 
         bool Delete(Guid id);

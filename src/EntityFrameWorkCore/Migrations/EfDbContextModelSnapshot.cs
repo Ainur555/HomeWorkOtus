@@ -112,57 +112,6 @@ namespace EntityFrameWorkCore.Migrations
                     b.ToTable("CustomerPreferences");
                 });
 
-            modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.Partner", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("PartnerId");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(32)
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("NumberIssuedPromoCodes")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Partners");
-                });
-
-            modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.PartnerPromoCodeLimit", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("PartnerPromocodeLimitId");
-
-                    b.Property<DateTime?>("CancelDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Limit")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<Guid>("PartnerId")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PartnerId");
-
-                    b.ToTable("PartnerPromoCodeLimits");
-                });
-
             modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.Preference", b =>
                 {
                     b.Property<Guid>("Id")
@@ -254,17 +203,6 @@ namespace EntityFrameWorkCore.Migrations
                     b.Navigation("Preference");
                 });
 
-            modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.PartnerPromoCodeLimit", b =>
-                {
-                    b.HasOne("PromoCodeFactory.Core.Domain.PromoCodeManagement.Partner", "Partner")
-                        .WithMany("PartnerLimits")
-                        .HasForeignKey("PartnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Partner");
-                });
-
             modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.PromoCode", b =>
                 {
                     b.HasOne("PromoCodeFactory.Core.Domain.PromoCodeManagement.Customer", "Customer")
@@ -302,11 +240,6 @@ namespace EntityFrameWorkCore.Migrations
                     b.Navigation("Preferences");
 
                     b.Navigation("PromoCodes");
-                });
-
-            modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.Partner", b =>
-                {
-                    b.Navigation("PartnerLimits");
                 });
 
             modelBuilder.Entity("PromoCodeFactory.Core.Domain.PromoCodeManagement.Preference", b =>

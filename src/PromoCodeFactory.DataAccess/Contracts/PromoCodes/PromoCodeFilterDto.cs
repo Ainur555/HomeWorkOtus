@@ -14,9 +14,6 @@ namespace PromoCodeFactory.DataAccess.Contracts.PromoCodes
 
         public required string ServiceInfo { get; init; }
 
-        public DateTime BeginDate { get; init; }
-
-        public DateTime EndDate { get; init; }
 
         public string PartnerName { get; init; }
 

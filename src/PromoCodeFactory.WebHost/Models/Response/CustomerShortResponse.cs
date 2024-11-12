@@ -1,7 +1,9 @@
-﻿using System;
+﻿using PromoCodeFactory.WebHost.Models.PromoCodes;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace PromoCodeFactory.WebHost.Models
+namespace PromoCodeFactory.WebHost.Models.Response
 {
     public class CustomerShortResponse
     {
@@ -12,5 +14,6 @@ namespace PromoCodeFactory.WebHost.Models
         public required string LastName { get; init; }
         [Required]
         public required string Email { get; init; }
+
     }
 }

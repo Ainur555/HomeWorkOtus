@@ -14,6 +14,8 @@ namespace PromoCodeFactory.DataAccess.Repositories
         protected readonly DbContext Context;
         private readonly DbSet<T> _entitySet;
 
+        private static readonly char[] IncludeSeparator = [','];
+
         protected EfRepository(DbContext context)
         {
             Context = context;
@@ -26,9 +28,19 @@ namespace PromoCodeFactory.DataAccess.Repositories
         /// <param name="id"> Id сущности. </param>
         /// <param name="cancellationToken"></param>
         /// <returns> Cущность. </returns>
-        public virtual async Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken)
+        public virtual async Task<T> GetByIdAsync(Guid id, CancellationToken cancellationToken, string includes = null)
         {
-            return await _entitySet.FirstOrDefaultAsync(x => x.Id == id, cancellationToken: cancellationToken);
+            IQueryable<T> query = _entitySet;
+
+            if (includes != null && includes.Any())
+            {
+                foreach (var includeEntity in includes.Split(IncludeSeparator, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeEntity);
+                }
+            }
+
+           return await query.AsNoTracking().FirstOrDefaultAsync();
         }
 
         public virtual IQueryable<T> GetAll()

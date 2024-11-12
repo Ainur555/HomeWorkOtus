@@ -28,7 +28,7 @@ namespace EntityFrameWorkCore
 
         public static async Task Seed(this EfDbContext context)
         {
-            await context.Database.EnsureDeletedAsync();
+            //await context.Database.EnsureDeletedAsync();
             await context.Database.EnsureCreatedAsync();
 
             SeedRoles(context);

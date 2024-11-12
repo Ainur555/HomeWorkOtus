@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PromoCodeFactory.WebHost.Models.Preferences
+namespace PromoCodeFactory.WebHost.Models.Request
 {
-    public class PreferencesFilterModel
+    public class PreferencesFilterRequest
     {
         public required string Name { get; init; }
 
