@@ -29,7 +29,6 @@ namespace PromoCodeFactory.WebHost
             services.AddServices(Configuration);
             services.AddControllers();
 
-
             services.AddOpenApiDocument(options =>
             {
                 options.Title = "PromoCode Factory API Doc";
