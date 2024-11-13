@@ -58,8 +58,6 @@ namespace PromoCodeFactory.WebHost.Services
             _customerRepository.Update(customer);
             await _customerRepository.SaveChangesAsync(cancellationToken);
 
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id, cancellationToken);
-
             return customer;
         }
 

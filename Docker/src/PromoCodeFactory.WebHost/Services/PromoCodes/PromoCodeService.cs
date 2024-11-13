@@ -46,7 +46,7 @@ namespace PromoCodeFactory.WebHost.Services.PromoCodes
             var employee = await _employeeRepository.GetByIdAsync(givePromoCodeModel.EmployeeId, cancellationToken);
             var preference = await _preferenceRepository.GetByIdAsync(givePromoCodeModel.PreferenceId, cancellationToken);
             var customers = await _customerPreferenceRepository.GetCustomersByPreferenceAsync(givePromoCodeModel.PreferenceId, cancellationToken);
-         
+
             var tasks = customers.Select(async customer =>
             {
                 var promoCode = new PromoCode
