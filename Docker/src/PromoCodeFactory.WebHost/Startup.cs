@@ -22,13 +22,14 @@ namespace PromoCodeFactory.WebHost
 
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<EfDbContext>(optionsBuilder
-                => optionsBuilder
-                    .UseSqlite(Configuration.Get<ApplicationSettings>().ConnectionString));
+              => optionsBuilder
+                  .UseNpgsql(Configuration.Get<ApplicationSettings>().ConnectionString));
+
             InstallAutomapper(services);
             services.AddServices(Configuration);
             services.AddControllers();
-
 
             services.AddOpenApiDocument(options =>
             {

@@ -39,8 +39,6 @@ namespace PromoCodeFactory.WebHost.Services
 
             await _customerRepository.SaveChangesAsync(cancellationToken);
 
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(createdCustomer.Id, cancellationToken);
-
             return customer;
         }
 
@@ -59,8 +57,6 @@ namespace PromoCodeFactory.WebHost.Services
 
             _customerRepository.Update(customer);
             await _customerRepository.SaveChangesAsync(cancellationToken);
-
-            var preferences = await _customerPreferenceRepository.GetPreferencesByCustomerAsync(customer.Id, cancellationToken);
 
             return customer;
         }
