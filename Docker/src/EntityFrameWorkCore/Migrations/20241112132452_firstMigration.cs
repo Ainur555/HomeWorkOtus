@@ -15,10 +15,10 @@ namespace EntityFrameWorkCore.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    FirstName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Email = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    FirstName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Email = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,8 +29,8 @@ namespace EntityFrameWorkCore.Migrations
                 name: "Preferences",
                 columns: table => new
                 {
-                    PreferenceId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", maxLength: 32, nullable: true)
+                    PreferenceId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "character varying(32)", maxLength: 32, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -41,9 +41,9 @@ namespace EntityFrameWorkCore.Migrations
                 name: "Roles",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "TEXT", maxLength: 250, nullable: true)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -54,8 +54,8 @@ namespace EntityFrameWorkCore.Migrations
                 name: "CustomerPreferences",
                 columns: table => new
                 {
-                    CustomerId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    PreferenceId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    CustomerId = table.Column<Guid>(type: "uuid", nullable: false),
+                    PreferenceId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -78,12 +78,12 @@ namespace EntityFrameWorkCore.Migrations
                 name: "Employees",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    FirstName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
-                    Email = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    RoleId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    AppliedPromocodesCount = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    FirstName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    Email = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    RoleId = table.Column<Guid>(type: "uuid", nullable: false),
+                    AppliedPromocodesCount = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -100,15 +100,15 @@ namespace EntityFrameWorkCore.Migrations
                 name: "PromoCodes",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Code = table.Column<string>(type: "TEXT", maxLength: 20, nullable: false),
-                    ServiceInfo = table.Column<string>(type: "TEXT", maxLength: 250, nullable: true),
-                    BeginDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    PartnerName = table.Column<string>(type: "TEXT", maxLength: 100, nullable: true),
-                    EmployeeId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    PreferenceId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    CustomerId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Code = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    ServiceInfo = table.Column<string>(type: "character varying(250)", maxLength: 250, nullable: true),
+                    BeginDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    PartnerName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
+                    EmployeeId = table.Column<Guid>(type: "uuid", nullable: false),
+                    PreferenceId = table.Column<Guid>(type: "uuid", nullable: false),
+                    CustomerId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {

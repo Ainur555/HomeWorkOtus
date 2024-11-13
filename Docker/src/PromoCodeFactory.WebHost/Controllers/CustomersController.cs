@@ -71,9 +71,10 @@ namespace PromoCodeFactory.WebHost.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<CustomerResponse>> CreateCustomerAsync(CreateOrEditCustomerRequest request)
+        public async Task<ActionResult<CustomerShortResponse>> CreateCustomerAsync(CreateOrEditCustomerRequest request)
         {
-            return Ok(await _service.CreateAsync(_mapper.Map<CreateOrEditCustomerModel>(request), HttpContext.RequestAborted));
+            var customer = await _service.CreateAsync(_mapper.Map<CreateOrEditCustomerModel>(request), HttpContext.RequestAborted);
+            return Ok(_mapper.Map<CustomerShortResponse>(customer));
         }
 
         /// <summary>
@@ -86,7 +87,9 @@ namespace PromoCodeFactory.WebHost.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<CustomerResponse>> EditCustomersAsync(Guid id, CreateOrEditCustomerRequest request)
         {
-            return Ok(await _service.UpdateAsync(id, _mapper.Map<CreateOrEditCustomerRequest, CreateOrEditCustomerModel>(request), HttpContext.RequestAborted));
+            var customer = (await _service.UpdateAsync(id, _mapper.Map<CreateOrEditCustomerRequest, CreateOrEditCustomerModel>(request), HttpContext.RequestAborted));
+
+            return Ok(_mapper.Map<CustomerShortResponse>(customer));
         }
 
         /// <summary>
