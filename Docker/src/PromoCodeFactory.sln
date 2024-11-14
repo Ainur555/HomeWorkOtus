@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameWorkCore", "Enti
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7E9B7744-1640-4065-8A77-A45D960D5E36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromoCodeFactory.UnitTests", "..\PromoCodeFactory.UnitTests\PromoCodeFactory.UnitTests.csproj", "{07CECB07-0C5D-4B1C-8449-94C2AAB1A271}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7E9B7744-1640-4065-8A77-A45D960D5E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E9B7744-1640-4065-8A77-A45D960D5E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E9B7744-1640-4065-8A77-A45D960D5E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07CECB07-0C5D-4B1C-8449-94C2AAB1A271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07CECB07-0C5D-4B1C-8449-94C2AAB1A271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07CECB07-0C5D-4B1C-8449-94C2AAB1A271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07CECB07-0C5D-4B1C-8449-94C2AAB1A271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
