@@ -2,10 +2,10 @@ namespace PromoCodeFactory.UnitTests
 {
     public class UnitTest1
     {
-        [Fact]
+        [Fact(Skip = "Заглушка для будущего теста")]
         public void Test1()
         {
-
+        
         }
     }
 }
