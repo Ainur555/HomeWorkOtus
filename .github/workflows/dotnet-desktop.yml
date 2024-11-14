@@ -14,6 +14,7 @@ jobs:
 
     env:
        PROJECT_NAME: PromoCodeFactory.WebHost
+       PROJECT_NAME_TESTS: PromoCodeFactory.UnitTests
        
     steps:
     - uses: actions/checkout@v4
