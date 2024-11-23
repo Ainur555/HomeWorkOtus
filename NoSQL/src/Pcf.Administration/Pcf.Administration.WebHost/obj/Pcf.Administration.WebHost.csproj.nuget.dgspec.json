@@ -1,0 +1,234 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.WebHost\\Pcf.Administration.WebHost.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj",
+        "projectName": "Pcf.Administration.Core",
+        "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj",
+        "packagesPath": "C:\\Users\\ainur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ainur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.DataAccess\\Pcf.Administration.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.DataAccess\\Pcf.Administration.DataAccess.csproj",
+        "projectName": "Pcf.Administration.DataAccess",
+        "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.DataAccess\\Pcf.Administration.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ainur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ainur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj": {
+                "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.WebHost\\Pcf.Administration.WebHost.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.WebHost\\Pcf.Administration.WebHost.csproj",
+        "projectName": "Pcf.Administration.WebHost",
+        "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.WebHost\\Pcf.Administration.WebHost.csproj",
+        "packagesPath": "C:\\Users\\ainur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.WebHost\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ainur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj": {
+                "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.Core\\Pcf.Administration.Core.csproj"
+              },
+              "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.DataAccess\\Pcf.Administration.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.Administration\\Pcf.Administration.DataAccess\\Pcf.Administration.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[14.1.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

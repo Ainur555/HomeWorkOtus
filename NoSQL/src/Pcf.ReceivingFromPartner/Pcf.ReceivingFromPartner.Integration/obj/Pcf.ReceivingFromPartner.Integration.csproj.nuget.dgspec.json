@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Integration\\Pcf.ReceivingFromPartner.Integration.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Core\\Pcf.ReceivingFromPartner.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Core\\Pcf.ReceivingFromPartner.Core.csproj",
+        "projectName": "Pcf.ReceivingFromPartner.Core",
+        "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Core\\Pcf.ReceivingFromPartner.Core.csproj",
+        "packagesPath": "C:\\Users\\ainur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ainur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Integration\\Pcf.ReceivingFromPartner.Integration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Integration\\Pcf.ReceivingFromPartner.Integration.csproj",
+        "projectName": "Pcf.ReceivingFromPartner.Integration",
+        "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Integration\\Pcf.ReceivingFromPartner.Integration.csproj",
+        "packagesPath": "C:\\Users\\ainur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Integration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ainur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Core\\Pcf.ReceivingFromPartner.Core.csproj": {
+                "projectPath": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.ReceivingFromPartner\\Pcf.ReceivingFromPartner.Core\\Pcf.ReceivingFromPartner.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

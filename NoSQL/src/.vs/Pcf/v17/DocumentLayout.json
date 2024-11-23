@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\customermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\customermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomerMapper.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:04:19.197Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
