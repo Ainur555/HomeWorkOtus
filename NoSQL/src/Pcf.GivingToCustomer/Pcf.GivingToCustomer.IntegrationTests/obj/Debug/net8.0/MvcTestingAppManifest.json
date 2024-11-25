@@ -1,0 +1,6 @@
+{
+  "Pcf.GivingToCustomer.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core",
+  "Pcf.GivingToCustomer.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess",
+  "Pcf.GivingToCustomer.Integration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration",
+  "Pcf.GivingToCustomer.WebHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost"
+}

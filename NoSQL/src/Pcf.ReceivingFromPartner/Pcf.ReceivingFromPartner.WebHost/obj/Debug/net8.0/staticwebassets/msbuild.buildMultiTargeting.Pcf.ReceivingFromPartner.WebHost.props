@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pcf.ReceivingFromPartner.WebHost.props" />
+</Project>

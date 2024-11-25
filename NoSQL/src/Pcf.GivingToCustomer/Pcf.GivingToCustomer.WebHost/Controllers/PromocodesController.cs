@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pcf.GivingToCustomer.Core.Abstractions.Repositories;
@@ -37,7 +38,7 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         [HttpGet]
         public async Task<ActionResult<List<PromoCodeShortResponse>>> GetPromocodesAsync()
         {
-            var promocodes = await _promoCodesRepository.GetAllAsync();
+            var promocodes = await _promoCodesRepository.GetAllAsync(HttpContext.RequestAborted);
 
             var response = promocodes.Select(x => new PromoCodeShortResponse()
             {
@@ -60,7 +61,7 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         public async Task<IActionResult> GivePromoCodesToCustomersWithPreferenceAsync(GivePromoCodeRequest request)
         {
             //Получаем предпочтение по имени
-            var preference = await _preferencesRepository.GetByIdAsync(request.PreferenceId);
+            var preference = await _preferencesRepository.GetByIdAsync(request.PreferenceId, HttpContext.RequestAborted);
 
             if (preference == null)
             {
@@ -70,11 +71,21 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
             //  Получаем клиентов с этим предпочтением:
             var customers = await _customersRepository
                 .GetWhere(d => d.Preferences.Any(x =>
-                    x.Preference.Id == preference.Id));
+                    x.Preference.Id == preference.Id), HttpContext.RequestAborted);
 
             PromoCode promoCode = PromoCodeMapper.MapFromModel(request, preference, customers);
+          
+            var tasks = customers.Select(async customer =>
+            {
+                customer.PromoCodes = promoCode.Customers;
 
-            await _promoCodesRepository.AddAsync(promoCode);
+                await _customersRepository.UpdateAsync(customer.Id, customer, HttpContext.RequestAborted);
+            });
+
+
+            await Task.WhenAll(tasks);
+
+            await _promoCodesRepository.AddAsync(promoCode, HttpContext.RequestAborted);
 
             return CreatedAtAction(nameof(GetPromocodesAsync), new { }, null);
         }

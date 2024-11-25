@@ -1,0 +1,16 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.csproj.AssemblyReference.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.Rece.358741DC.Up2Date
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\refint\Pcf.ReceivingFromPartner.Integration.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Integration.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Integration\obj\Debug\net8.0\ref\Pcf.ReceivingFromPartner.Integration.dll

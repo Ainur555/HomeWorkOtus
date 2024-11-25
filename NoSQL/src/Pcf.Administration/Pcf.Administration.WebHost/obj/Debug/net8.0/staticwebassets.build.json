@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uL7jkB50R7HE25TYhhCZmKftxUsU3OocfPsdFt2ZLt8=",
+  "Source": "Pcf.Administration.WebHost",
+  "BasePath": "_content/Pcf.Administration.WebHost",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

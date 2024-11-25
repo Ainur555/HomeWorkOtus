@@ -15,5 +15,11 @@ namespace Pcf.GivingToCustomer.Core.Domain
         public virtual ICollection<CustomerPreference> Preferences { get; set; }
         
         public virtual ICollection<PromoCodeCustomer> PromoCodes { get; set; }
+
+        public Customer()
+        {
+            Preferences = new List<CustomerPreference>();
+            PromoCodes = new List<PromoCodeCustomer>();
+        }
     }
 }

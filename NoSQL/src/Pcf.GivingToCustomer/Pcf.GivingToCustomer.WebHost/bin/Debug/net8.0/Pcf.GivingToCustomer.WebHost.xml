@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pcf.GivingToCustomer.WebHost</name>
+    </assembly>
+    <members>
+        <member name="T:Pcf.GivingToCustomer.WebHost.Controllers.CustomersController">
+            <summary>
+            Клиенты
+            </summary>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.CustomersController.GetCustomersAsync">
+            <summary>
+            Получить список клиентов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.CustomersController.GetCustomerAsync(System.Guid)">
+            <summary>
+            Получить клиента по id
+            </summary>
+            <param name="id">Id клиента, например <example>a6c8c6b1-4349-45b0-ab31-244740aaf0f0</example></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.CustomersController.CreateCustomerAsync(Pcf.GivingToCustomer.WebHost.Models.CreateOrEditCustomerRequest)">
+            <summary>
+            Создать нового клиента
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.CustomersController.EditCustomersAsync(System.Guid,Pcf.GivingToCustomer.WebHost.Models.CreateOrEditCustomerRequest)">
+            <summary>
+            Обновить клиента
+            </summary>
+            <param name="id">Id клиента, например <example>a6c8c6b1-4349-45b0-ab31-244740aaf0f0</example></param>
+            <param name="request">Данные запроса></param>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.CustomersController.DeleteCustomerAsync(System.Guid)">
+            <summary>
+            Удалить клиента
+            </summary>
+            <param name="id">Id клиента, например <example>a6c8c6b1-4349-45b0-ab31-244740aaf0f0</example></param>
+        </member>
+        <member name="T:Pcf.GivingToCustomer.WebHost.Controllers.PreferencesController">
+            <summary>
+            Предпочтения клиентов
+            </summary>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.PreferencesController.GetPreferencesAsync">
+            <summary>
+            Получить список предпочтений
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.PreferencesController.CreateCustomerAsync(Pcf.GivingToCustomer.WebHost.Models.CreateOrEditPreference)">
+            <summary>
+            Создать нового предпочтения
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pcf.GivingToCustomer.WebHost.Controllers.PromocodesController">
+            <summary>
+            Промокоды
+            </summary>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.PromocodesController.GetPromocodesAsync">
+            <summary>
+            Получить все промокоды
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pcf.GivingToCustomer.WebHost.Controllers.PromocodesController.GivePromoCodesToCustomersWithPreferenceAsync(Pcf.GivingToCustomer.WebHost.Models.GivePromoCodeRequest)">
+            <summary>
+            Создать промокод и выдать его клиентам с указанным предпочтением
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pcf.GivingToCustomer.WebHost.Models.CreateOrEditCustomerRequest">
+            <example>
+            {
+               "firstName": "Иван",
+               "lastName": "Васильев",
+                "email": "ivan_vasiliev@somemail.ru",
+                   "preferenceIds": [
+                       "c4bda62e-fc74-4256-a956-4760b3858cbd"
+                   ]
+            }
+            </example>>
+        </member>
+    </members>
+</doc>

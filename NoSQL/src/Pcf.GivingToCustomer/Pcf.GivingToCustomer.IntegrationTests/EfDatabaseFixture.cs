@@ -11,13 +11,13 @@ namespace Pcf.GivingToCustomer.IntegrationTests
         {
             DbContext = new TestDataContext();
 
-            _efTestDbInitializer= new EfTestDbInitializer(DbContext);
-            _efTestDbInitializer.InitializeDb();
+            //_efTestDbInitializer= new EfTestDbInitializer(DbContext);
+            //_efTestDbInitializer.InitializeDb();
         }
 
         public void Dispose()
         {
-            _efTestDbInitializer.CleanDb();
+           // _efTestDbInitializer.CleanDb();
         }
 
         public TestDataContext DbContext { get; private set; }

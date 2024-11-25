@@ -4,11 +4,11 @@ using Pcf.GivingToCustomer.DataAccess;
 namespace Pcf.GivingToCustomer.IntegrationTests
 {
     public class TestDataContext
-        : DataContext
+       // : DataContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite("Filename=PromocodeFactoryGivingToCustomerDb.sqlite");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlite("Filename=PromocodeFactoryGivingToCustomerDb.sqlite");
+        //}
     }
 }

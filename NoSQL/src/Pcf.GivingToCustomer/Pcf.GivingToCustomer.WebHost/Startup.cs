@@ -17,6 +17,10 @@ using Pcf.GivingToCustomer.DataAccess.Data;
 using Pcf.GivingToCustomer.DataAccess.Repositories;
 using Pcf.GivingToCustomer.Integration;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
+using Pcf.GivingToCustomer.Core;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+using Pcf.GivingToCustomer.Core.Domain;
 
 namespace Pcf.GivingToCustomer.WebHost
 {
@@ -35,16 +39,52 @@ namespace Pcf.GivingToCustomer.WebHost
         {
             services.AddControllers().AddMvcOptions(x=> 
                 x.SuppressAsyncSuffixInActionNames = false);
-            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+           // services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<INotificationGateway, NotificationGateway>();
-            services.AddScoped<IDbInitializer, EfDbInitializer>();
-            services.AddDbContext<DataContext>(x =>
+            //services.AddScoped<IDbInitializer, EfDbInitializer>();
+
+            services.Configure<MongoSettings>(Configuration.GetSection("MongoSettings"));
+
+
+            services.AddSingleton<IMongoClient>(serviceProvider =>
             {
-                //x.UseSqlite("Filename=PromocodeFactoryGivingToCustomerDb.sqlite");
-                x.UseNpgsql(Configuration.GetConnectionString("PromocodeFactoryGivingToCustomerDb"));
-                x.UseSnakeCaseNamingConvention();
-                x.UseLazyLoadingProxies();
+                var mongoSettings = serviceProvider.GetRequiredService<IOptions<MongoSettings>>().Value;
+                return new MongoClient(mongoSettings.ConnectionString);
             });
+
+            services.AddSingleton<DataContext>(serviceProvider =>
+            {
+                var mongoClient = serviceProvider.GetRequiredService<IMongoClient>();
+                var mongoSettings = serviceProvider.GetRequiredService<IOptions<MongoSettings>>().Value;
+                return new DataContext(mongoClient, mongoSettings.DatabaseName);
+            });
+
+            services.AddScoped<IRepository<Customer>>(serviceProvider =>
+            {
+                var context = serviceProvider.GetRequiredService<DataContext>();
+                return new EfRepository<Customer>(context, "Customers");
+            });
+
+            services.AddScoped<IRepository<Preference>>(serviceProvider =>
+            {
+                var context = serviceProvider.GetRequiredService<DataContext>();
+                return new EfRepository<Preference>(context, "Preferences");
+            });
+
+            services.AddScoped<IRepository<PromoCode>>(serviceProvider =>
+            {
+                var context = serviceProvider.GetRequiredService<DataContext>();
+                return new EfRepository<PromoCode>(context, "PromoCodes");
+            });
+
+            //services.AddScoped<IRepository<Customer>, EfRepository<Customer>>();
+
+            //services.AddDbContext<DataContext>(x =>
+            //{
+            //    x.UseNpgsql(Configuration.GetConnectionString("PromocodeFactoryGivingToCustomerDb"));
+            //    x.UseSnakeCaseNamingConvention();
+            //    x.UseLazyLoadingProxies();
+            //});
 
             services.AddOpenApiDocument(options =>
             {
@@ -54,7 +94,7 @@ namespace Pcf.GivingToCustomer.WebHost
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInitializer)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -80,7 +120,7 @@ namespace Pcf.GivingToCustomer.WebHost
                 endpoints.MapControllers();
             });
             
-            dbInitializer.InitializeDb();
+            //dbInitializer.InitializeDb();
         }
     }
 }

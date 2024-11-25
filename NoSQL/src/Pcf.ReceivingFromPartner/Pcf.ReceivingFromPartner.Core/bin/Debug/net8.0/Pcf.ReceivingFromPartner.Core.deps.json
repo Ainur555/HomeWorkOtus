@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Pcf.ReceivingFromPartner.Core/1.0.0": {
+        "runtime": {
+          "Pcf.ReceivingFromPartner.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pcf.ReceivingFromPartner.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

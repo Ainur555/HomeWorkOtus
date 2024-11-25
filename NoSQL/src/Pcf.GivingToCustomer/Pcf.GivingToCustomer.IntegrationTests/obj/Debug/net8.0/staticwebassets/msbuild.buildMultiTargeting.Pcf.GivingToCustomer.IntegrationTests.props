@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pcf.GivingToCustomer.IntegrationTests.props" />
+</Project>

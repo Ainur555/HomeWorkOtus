@@ -1,0 +1,13 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.csproj.AssemblyReference.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\refint\Pcf.GivingToCustomer.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\Pcf.GivingToCustomer.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Core\obj\Debug\net8.0\ref\Pcf.GivingToCustomer.Core.dll

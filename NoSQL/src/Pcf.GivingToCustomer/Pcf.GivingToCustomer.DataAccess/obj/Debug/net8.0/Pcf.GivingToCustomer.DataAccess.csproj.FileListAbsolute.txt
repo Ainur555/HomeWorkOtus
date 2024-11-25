@@ -1,0 +1,16 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\bin\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\bin\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\bin\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.Givi.5FF96D71.Up2Date
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\refint\Pcf.GivingToCustomer.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\Pcf.GivingToCustomer.DataAccess.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.DataAccess\obj\Debug\net8.0\ref\Pcf.GivingToCustomer.DataAccess.dll

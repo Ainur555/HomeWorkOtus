@@ -1,0 +1,16 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\bin\Debug\net8.0\Pcf.GivingToCustomer.Integration.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\bin\Debug\net8.0\Pcf.GivingToCustomer.Integration.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\bin\Debug\net8.0\Pcf.GivingToCustomer.Integration.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\bin\Debug\net8.0\Pcf.GivingToCustomer.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.csproj.AssemblyReference.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.Givi.6AF0F26C.Up2Date
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\refint\Pcf.GivingToCustomer.Integration.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\Pcf.GivingToCustomer.Integration.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.Integration\obj\Debug\net8.0\ref\Pcf.GivingToCustomer.Integration.dll

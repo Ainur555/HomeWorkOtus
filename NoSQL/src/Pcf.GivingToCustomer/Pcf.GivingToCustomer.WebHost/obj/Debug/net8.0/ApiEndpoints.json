@@ -1,0 +1,183 @@
+[
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.CustomersController",
+    "Method": "GetCustomersAsync",
+    "RelativePath": "api/v1/Customers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Pcf.GivingToCustomer.WebHost.Models.CustomerShortResponse, Pcf.GivingToCustomer.WebHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.CustomersController",
+    "Method": "CreateCustomerAsync",
+    "RelativePath": "api/v1/Customers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Pcf.GivingToCustomer.WebHost.Models.CreateOrEditCustomerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Pcf.GivingToCustomer.WebHost.Models.CustomerResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.CustomersController",
+    "Method": "GetCustomerAsync",
+    "RelativePath": "api/v1/Customers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Pcf.GivingToCustomer.WebHost.Models.CustomerResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.CustomersController",
+    "Method": "EditCustomersAsync",
+    "RelativePath": "api/v1/Customers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Pcf.GivingToCustomer.WebHost.Models.CreateOrEditCustomerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.CustomersController",
+    "Method": "DeleteCustomerAsync",
+    "RelativePath": "api/v1/Customers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.PreferencesController",
+    "Method": "GetPreferencesAsync",
+    "RelativePath": "api/v1/Preferences",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Pcf.GivingToCustomer.WebHost.Models.PreferenceResponse, Pcf.GivingToCustomer.WebHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.PreferencesController",
+    "Method": "CreateCustomerAsync",
+    "RelativePath": "api/v1/Preferences",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Pcf.GivingToCustomer.WebHost.Models.CreateOrEditPreference",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.PromocodesController",
+    "Method": "GetPromocodesAsync",
+    "RelativePath": "api/v1/Promocodes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Pcf.GivingToCustomer.WebHost.Models.PromoCodeShortResponse, Pcf.GivingToCustomer.WebHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Pcf.GivingToCustomer.WebHost.Controllers.PromocodesController",
+    "Method": "GivePromoCodesToCustomersWithPreferenceAsync",
+    "RelativePath": "api/v1/Promocodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Pcf.GivingToCustomer.WebHost.Models.GivePromoCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

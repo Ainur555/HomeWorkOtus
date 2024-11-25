@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Pcf.GivingToCustomer.WebHost.props" />
+</Project>

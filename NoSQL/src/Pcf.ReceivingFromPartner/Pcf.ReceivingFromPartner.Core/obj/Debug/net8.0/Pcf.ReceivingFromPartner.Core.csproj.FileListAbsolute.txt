@@ -1,0 +1,12 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\refint\Pcf.ReceivingFromPartner.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\Pcf.ReceivingFromPartner.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.Core\obj\Debug\net8.0\ref\Pcf.ReceivingFromPartner.Core.dll

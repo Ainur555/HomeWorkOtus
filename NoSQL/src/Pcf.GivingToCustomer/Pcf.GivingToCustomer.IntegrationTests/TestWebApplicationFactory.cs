@@ -19,39 +19,39 @@ namespace Pcf.GivingToCustomer.IntegrationTests
         {
             builder.ConfigureServices(services =>
             {
-                var descriptor = services.SingleOrDefault(
-                    d => d.ServiceType ==
-                         typeof(DbContextOptions<DataContext>));
+                //var descriptor = services.SingleOrDefault(
+                //    d => d.ServiceType ==
+                //         typeof(DbContextOptions<DataContext>));
 
-                services.Remove(descriptor);
+                //services.Remove(descriptor);
 
                 services.AddScoped<INotificationGateway, NotificationGateway>();
                 
-                services.AddDbContext<DataContext>(x =>
-                {
-                    x.UseSqlite("Filename=PromoCodeFactoryDb.sqlite");
-                    //x.UseNpgsql(Configuration.GetConnectionString("PromoCodeFactoryDb"));
-                    x.UseSnakeCaseNamingConvention();
-                    x.UseLazyLoadingProxies();
-                });
+                //services.AddDbContext<DataContext>(x =>
+                //{
+                //    x.UseSqlite("Filename=PromoCodeFactoryDb.sqlite");
+                //    //x.UseNpgsql(Configuration.GetConnectionString("PromoCodeFactoryDb"));
+                //    x.UseSnakeCaseNamingConvention();
+                //    x.UseLazyLoadingProxies();
+                //});
 
                 var sp = services.BuildServiceProvider();
 
                 using var scope = sp.CreateScope();
                 var scopedServices = scope.ServiceProvider;
-                var dbContext = scopedServices.GetRequiredService<DataContext>();
+               // var dbContext = scopedServices.GetRequiredService<DataContext>();
                 var logger = scopedServices
                     .GetRequiredService<ILogger<TestWebApplicationFactory<TStartup>>>();
                 
-                try
-                {
-                    new EfTestDbInitializer(dbContext).InitializeDb();
-                }
-                catch (Exception ex)
-                {
-                    logger.LogError(ex, "Проблема во время заполнения тестовой базы. " +
-                                        "Ошибка: {Message}", ex.Message);
-                }
+                //try
+                //{
+                //    new EfTestDbInitializer(dbContext).InitializeDb();
+                //}
+                //catch (Exception ex)
+                //{
+                //    logger.LogError(ex, "Проблема во время заполнения тестовой базы. " +
+                //                        "Ошибка: {Message}", ex.Message);
+                //}
             });
         }
     }

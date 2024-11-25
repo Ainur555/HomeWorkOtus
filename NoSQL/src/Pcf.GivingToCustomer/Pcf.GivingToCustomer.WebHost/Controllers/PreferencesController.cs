@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Pcf.GivingToCustomer.Core.Abstractions.Repositories;
 using Pcf.GivingToCustomer.Core.Domain;
+using Pcf.GivingToCustomer.WebHost.Mappers;
 using Pcf.GivingToCustomer.WebHost.Models;
 
 namespace Pcf.GivingToCustomer.WebHost.Controllers
@@ -31,7 +32,7 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         [HttpGet]
         public async Task<ActionResult<List<PreferenceResponse>>> GetPreferencesAsync()
         {
-            var preferences = await _preferencesRepository.GetAllAsync();
+            var preferences = await _preferencesRepository.GetAllAsync(HttpContext.RequestAborted);
 
             var response = preferences.Select(x => new PreferenceResponse()
             {
@@ -41,5 +42,21 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
 
             return Ok(response);
         }
+
+
+        /// <summary>
+        /// Создать нового предпочтения
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> CreateCustomerAsync(CreateOrEditPreference request)
+        {        
+           Preference preference = PreferenceMapper.MapFromModel(request);
+
+           await _preferencesRepository.AddAsync(preference, HttpContext.RequestAborted);
+
+           return Ok(preference);
+        }
+
     }
 }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TrAXzdLvLldOo+7aF/g9ydmBdMBfWC3TvjVbUz0AjEI=",
+  "Source": "Pcf.ReceivingFromPartner.WebHost",
+  "BasePath": "_content/Pcf.ReceivingFromPartner.WebHost",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

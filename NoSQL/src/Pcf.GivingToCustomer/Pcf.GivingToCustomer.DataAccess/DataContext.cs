@@ -1,41 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+using Pcf.GivingToCustomer.Core;
 using Pcf.GivingToCustomer.Core.Domain;
 using Pcf.GivingToCustomer.DataAccess.Data;
 
 namespace Pcf.GivingToCustomer.DataAccess
 {
     public class DataContext
-        : DbContext
     {
-        public DbSet<PromoCode> PromoCodes { get; set; }
+        private IMongoDatabase _db { get; set; }
 
-        public DbSet<Customer> Customers { get; set; }
-        
-        public DbSet<Preference> Preferences { get; set; }
-
-        public DataContext()
+        public IMongoDatabase Database => _db;
+        public IMongoCollection<Customer> Customers => _db.GetCollection<Customer>("Customers");
+        public IMongoCollection<PromoCode> PromoCode => _db.GetCollection<PromoCode>("PromoCodes");
+        public IMongoCollection<Preference> Preference => _db.GetCollection<Preference>("Preferences");
+        public DataContext(IMongoClient mongoClient, string databaseName)
         {
-            
-        }
-        
-        public DataContext(DbContextOptions<DataContext> options)
-            : base(options)
-        {
-
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<CustomerPreference>()
-                .HasKey(bc => new {bc.CustomerId, bc.PreferenceId});
-            modelBuilder.Entity<CustomerPreference>()
-                .HasOne(bc => bc.Customer)
-                .WithMany(b => b.Preferences)
-                .HasForeignKey(bc => bc.CustomerId);  
-            modelBuilder.Entity<CustomerPreference>()
-                .HasOne(bc => bc.Preference)
-                .WithMany()
-                .HasForeignKey(bc => bc.PreferenceId); 
-        }
+            _db = mongoClient.GetDatabase(databaseName);
+        }         
     }
 }

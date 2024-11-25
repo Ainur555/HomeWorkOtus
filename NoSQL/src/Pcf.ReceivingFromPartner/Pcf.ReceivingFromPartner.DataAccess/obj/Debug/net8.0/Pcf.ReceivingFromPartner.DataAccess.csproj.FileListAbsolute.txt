@@ -1,0 +1,16 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\bin\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\bin\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\bin\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\bin\Debug\net8.0\Pcf.ReceivingFromPartner.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.Rece.12BF0D4C.Up2Date
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\refint\Pcf.ReceivingFromPartner.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\Pcf.ReceivingFromPartner.DataAccess.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.ReceivingFromPartner\Pcf.ReceivingFromPartner.DataAccess\obj\Debug\net8.0\ref\Pcf.ReceivingFromPartner.DataAccess.dll

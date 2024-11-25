@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "K2vTnfOtD/21wkHdyMBC3QRd9q6NUwGe6GPLTZlATz0=",
+  "Source": "Pcf.GivingToCustomer.IntegrationTests",
+  "BasePath": "_content/Pcf.GivingToCustomer.IntegrationTests",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj",
+      "Version": 2,
+      "Source": "Pcf.GivingToCustomer.WebHost",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

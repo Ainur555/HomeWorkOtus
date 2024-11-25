@@ -1,0 +1,19 @@
+name: dockercompose16692881296085268137
+services:
+  pcf.givingtocustomer.webhost:
+    build:
+      context: C:\Users\ainur\source\repos\HomeWorkOtusNew\NoSQL\src\Pcf.GivingToCustomer\Pcf.GivingToCustomer.WebHost
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: pcfgivingtocustomerwebhost
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose16692881296085268137_default

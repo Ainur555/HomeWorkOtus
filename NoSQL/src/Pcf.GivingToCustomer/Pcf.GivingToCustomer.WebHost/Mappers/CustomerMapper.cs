@@ -10,7 +10,7 @@ namespace Pcf.GivingToCustomer.WebHost.Mappers
     public class CustomerMapper
     {
 
-        public static Customer MapFromModel(CreateOrEditCustomerRequest model, IEnumerable<Preference> preferences, Customer customer = null)
+        public static Customer MapFromModel(CreateOrEditCustomerRequest model, IEnumerable<Preference> preferences = null, Customer customer = null)
         {
             if(customer == null)
             {
@@ -18,17 +18,20 @@ namespace Pcf.GivingToCustomer.WebHost.Mappers
                 customer.Id = Guid.NewGuid();
             }
             
-            customer.FirstName = model.FirstName;
-            customer.LastName = model.LastName;
-            customer.Email = model.Email;
+            customer.FirstName = !string.IsNullOrWhiteSpace(model.FirstName) ? model.FirstName : customer.FirstName;
+            customer.LastName = !string.IsNullOrWhiteSpace(model.LastName) ? model.LastName : customer.LastName;
+            customer.Email = !string.IsNullOrWhiteSpace(model.Email) ? model.Email : customer.Email;
 
-            customer.Preferences = preferences.Select(x => new CustomerPreference()
+            if (preferences != null)
             {
-                CustomerId = customer.Id,
-                Preference = x,
-                PreferenceId = x.Id
-            }).ToList();
-            
+                customer.Preferences = preferences.Select(x => new CustomerPreference()
+                {
+                    CustomerId = customer.Id,
+                    Preference = x,
+                    PreferenceId = x.Id
+                }).ToList();
+            }
+
             return customer;
         }
     }

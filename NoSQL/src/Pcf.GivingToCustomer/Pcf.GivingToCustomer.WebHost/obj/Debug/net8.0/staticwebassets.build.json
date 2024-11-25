@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "S4agg34xLQaADicjNs0ihWTJ+duU+skjcyhGboe1qWc=",
+  "Source": "Pcf.GivingToCustomer.WebHost",
+  "BasePath": "_content/Pcf.GivingToCustomer.WebHost",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

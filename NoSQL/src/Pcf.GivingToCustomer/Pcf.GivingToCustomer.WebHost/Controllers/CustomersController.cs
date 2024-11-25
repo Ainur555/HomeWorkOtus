@@ -35,7 +35,7 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         [HttpGet]
         public async Task<ActionResult<List<CustomerShortResponse>>> GetCustomersAsync()
         {
-            var customers =  await _customerRepository.GetAllAsync();
+            var customers =  await _customerRepository.GetAllAsync(HttpContext.RequestAborted);
 
             var response = customers.Select(x => new CustomerShortResponse()
             {
@@ -56,7 +56,7 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<CustomerResponse>> GetCustomerAsync(Guid id)
         {
-            var customer =  await _customerRepository.GetByIdAsync(id);
+            var customer =  await _customerRepository.GetByIdAsync(id, HttpContext.RequestAborted);
 
             var response = new CustomerResponse(customer);
 
@@ -72,11 +72,11 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         {
             //Получаем предпочтения из бд и сохраняем большой объект
             var preferences = await _preferenceRepository
-                .GetRangeByIdsAsync(request.PreferenceIds);
+                .GetRangeByIdsAsync(request.PreferenceIds, HttpContext.RequestAborted);
 
             Customer customer = CustomerMapper.MapFromModel(request, preferences);
             
-            await _customerRepository.AddAsync(customer);
+            await _customerRepository.AddAsync(customer, HttpContext.RequestAborted);
 
             return CreatedAtAction(nameof(GetCustomerAsync), new {id = customer.Id}, customer.Id);
         }
@@ -89,18 +89,25 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> EditCustomersAsync(Guid id, CreateOrEditCustomerRequest request)
         {
-            var customer = await _customerRepository.GetByIdAsync(id);
+            var customer = await _customerRepository.GetByIdAsync(id, HttpContext.RequestAborted);
             
             if (customer == null)
-                return NotFound();
-            
-            var preferences = await _preferenceRepository.GetRangeByIdsAsync(request.PreferenceIds);
-            
-            CustomerMapper.MapFromModel(request, preferences, customer);
+                return NotFound();         
+           
+            if(request.PreferenceIds != null)
+            {
+                var preferences = await _preferenceRepository.GetRangeByIdsAsync(request.PreferenceIds, HttpContext.RequestAborted);
+                CustomerMapper.MapFromModel(request, preferences, customer);
+            }
+            else
+            {
+                CustomerMapper.MapFromModel(request, customer:customer);
+            }
+   
 
-            await _customerRepository.UpdateAsync(customer);
+            await _customerRepository.UpdateAsync(id, customer, HttpContext.RequestAborted);
 
-            return NoContent();
+            return Ok($"Клиент с id {id} обновлен");
         }
         
         /// <summary>
@@ -110,14 +117,14 @@ namespace Pcf.GivingToCustomer.WebHost.Controllers
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> DeleteCustomerAsync(Guid id)
         {
-            var customer = await _customerRepository.GetByIdAsync(id);
+            var customer = await _customerRepository.GetByIdAsync(id, HttpContext.RequestAborted);
             
             if (customer == null)
                 return NotFound();
 
-            await _customerRepository.DeleteAsync(customer);
+            await _customerRepository.DeleteAsync(id, HttpContext.RequestAborted);
 
-            return NoContent();
+            return Ok($"Клиент с id {id} удален");
         }
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\bin\Debug\net8.0\Pcf.Administration.DataAccess.deps.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\bin\Debug\net8.0\Pcf.Administration.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\bin\Debug\net8.0\Pcf.Administration.DataAccess.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\bin\Debug\net8.0\Pcf.Administration.Core.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\bin\Debug\net8.0\Pcf.Administration.Core.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.AssemblyInfo.cs
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.sourcelink.json
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Admi.A6642A1A.Up2Date
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\refint\Pcf.Administration.DataAccess.dll
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\Pcf.Administration.DataAccess.pdb
+C:\Users\ainur\Source\Repos\HomeWorkOtusNew\NoSQL\src\Pcf.Administration\Pcf.Administration.DataAccess\obj\Debug\net8.0\ref\Pcf.Administration.DataAccess.dll
