@@ -3,8 +3,148 @@
   "WorkspaceRootPath": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\controllers\\promocodescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\controllers\\promocodescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\promocode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\promocode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\promocodemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\promocodemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\promocodecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\promocodecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\customerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\customerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\preference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\preference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\customerpreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\customerpreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\customermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\customermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\controllers\\preferencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\controllers\\preferencescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\preferencemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\mappers\\preferencemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\repositories\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\createoreditpreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\createoreditpreference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\data\\fakedatafactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\data\\fakedatafactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\data\\efdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\data\\efdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\givepromocoderequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\givepromocoderequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\createoreditcustomerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\models\\createoreditcustomerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\abstractions\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\abstractions\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\pcf.givingtocustomer.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\pcf.givingtocustomer.dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D930308C-760B-48B7-875C-33E80BDB1DA8}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Pcf.GivingToCustomer.WebHost.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.webhost\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\testwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\testwebapplicationfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\components\\webhost\\controllers\\customerscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\components\\webhost\\controllers\\customerscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\testdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\testdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\data\\eftestdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\data\\eftestdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.core\\abstractions\\gateways\\inotificationgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2030846A-3084-4912-A9CB-46688EAC72E7}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Pcf.GivingToCustomer.Core.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.core\\abstractions\\gateways\\inotificationgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\imongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\imongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\mongosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\mongosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\efdatabasecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E321BB56-BCFC-40AF-8605-1422A9DEE016}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Pcf.GivingToCustomer.IntegrationTests.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.integrationtests\\efdatabasecollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\data\\idbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20E94F0C-5351-4F49-A9E3-12C8C40120DE}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.dataaccess\\data\\idbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66E78D3C-2933-4E30-9EAE-842D23BC8078}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration\\Pcf.GivingToCustomer.Integration.csproj|c:\\users\\ainur\\source\\repos\\homeworkotusnew\\nosql\\src\\pcf.givingtocustomer\\pcf.givingtocustomer.integration\\notificationgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66E78D3C-2933-4E30-9EAE-842D23BC8078}|Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration\\Pcf.GivingToCustomer.Integration.csproj|solutionrelative:pcf.givingtocustomer\\pcf.givingtocustomer.integration\\notificationgateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,15 +191,456 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PromocodesController.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PromocodesController.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PromocodesController.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PromocodesController.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PromocodesController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAFcAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:25:02.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\CustomersController.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAqwGMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:32:44.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PromoCode.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCode.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCode.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCode.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:28:59.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PromoCodeCustomer.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCodeCustomer.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCodeCustomer.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCodeCustomer.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\PromoCodeCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T15:58:11.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PromoCodeMapper.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PromoCodeMapper.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PromoCodeMapper.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PromoCodeMapper.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PromoCodeMapper.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAEwCYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:25:35.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Customer.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Customer.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Customer.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:27:56.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerPreference.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\CustomerPreference.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\CustomerPreference.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\CustomerPreference.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\CustomerPreference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:28:38.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Preference.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Preference.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Preference.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Preference.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\Preference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:28:39.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\DataContext.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\DataContext.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\DataContext.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:19:28.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PreferenceMapper.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PreferenceMapper.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PreferenceMapper.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PreferenceMapper.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\PreferenceMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T20:19:36.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CustomerMapper.cs",
               "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
               "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
               "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
               "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Mappers\\CustomerMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T19:04:19.197Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CustomerResponse.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CustomerResponse.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CustomerResponse.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CustomerResponse.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAhwCgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T16:31:27.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PreferencesController.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PreferencesController.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PreferencesController.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PreferencesController.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Controllers\\PreferencesController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvywAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:24:57.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GivePromoCodeRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\GivePromoCodeRequest.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\GivePromoCodeRequest.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\GivePromoCodeRequest.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\GivePromoCodeRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T18:10:22.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateOrEditPreference.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditPreference.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditPreference.cs",
+              "ToolTip": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditPreference.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditPreference.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T20:16:00.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FakeDataFactory.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\FakeDataFactory.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\FakeDataFactory.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\FakeDataFactory.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\FakeDataFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:19:53.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EfDbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\EfDbInitializer.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\EfDbInitializer.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\EfDbInitializer.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\EfDbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:19:54.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EfRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Repositories\\EfRepository.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Repositories\\EfRepository.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Repositories\\EfRepository.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Repositories\\EfRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAewDwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:19:36.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateOrEditCustomerRequest.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditCustomerRequest.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditCustomerRequest.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditCustomerRequest.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Models\\CreateOrEditCustomerRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T20:16:25.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Repositories\\IRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:33:02.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\BaseEntity.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Domain\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:28:00.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Startup.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Startup.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Startup.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Startup.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAUwDsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:33:28.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\appsettings.json",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\appsettings.json",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\appsettings.json",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-23T17:43:22.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Pcf.GivingToCustomer.DataAccess",
+              "DocumentMoniker": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj",
+              "ToolTip": "C:\\Users\\ainur\\Source\\Repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Pcf.GivingToCustomer.DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-24T20:29:04.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CustomersControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Components\\WebHost\\Controllers\\CustomersControllerTests.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Components\\WebHost\\Controllers\\CustomersControllerTests.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Components\\WebHost\\Controllers\\CustomersControllerTests.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Components\\WebHost\\Controllers\\CustomersControllerTests.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T12:57:38.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Program.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Program.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Program.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:33:27.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Dockerfile",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Dockerfile",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Dockerfile",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.WebHost\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-24T16:05:40.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TestWebApplicationFactory.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestWebApplicationFactory.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestWebApplicationFactory.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestWebApplicationFactory.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestWebApplicationFactory.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T12:57:18.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EfTestDbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Data\\EfTestDbInitializer.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Data\\EfTestDbInitializer.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Data\\EfTestDbInitializer.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\Data\\EfTestDbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T12:56:09.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TestDataContext.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestDataContext.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestDataContext.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestDataContext.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\TestDataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T12:57:02.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "INotificationGateway.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Gateways\\INotificationGateway.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Gateways\\INotificationGateway.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Gateways\\INotificationGateway.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Core\\Abstractions\\Gateways\\INotificationGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:34:05.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IMongoDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\IMongoDBContext.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\IMongoDBContext.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\IMongoDBContext.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\IMongoDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T16:24:53.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MongoSettings.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\MongoSettings.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\MongoSettings.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\MongoSettings.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\MongoSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T19:44:09.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "EfDatabaseCollection.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\EfDatabaseCollection.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\EfDatabaseCollection.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\EfDatabaseCollection.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.IntegrationTests\\EfDatabaseCollection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:33:21.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IDbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\IDbInitializer.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\IDbInitializer.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\IDbInitializer.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.DataAccess\\Data\\IDbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T17:19:51.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "NotificationGateway.cs",
+              "DocumentMoniker": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration\\NotificationGateway.cs",
+              "RelativeDocumentMoniker": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration\\NotificationGateway.cs",
+              "ToolTip": "C:\\Users\\ainur\\source\\repos\\HomeWorkOtusNew\\NoSQL\\src\\Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration\\NotificationGateway.cs",
+              "RelativeToolTip": "Pcf.GivingToCustomer\\Pcf.GivingToCustomer.Integration\\NotificationGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T12:19:41.077Z"
             }
           ]
         }
