@@ -1,1 +1,0 @@
-dotnet ef database drop --project "C:\Users\ainur\source\repos\HomeWorkOtus\src\EntityFrameWorkCore" --startup-project "C:\Users\ainur\source\repos\HomeWorkOtus\src\PromoCodeFactory.WebHost"

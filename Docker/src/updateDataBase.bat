@@ -1,2 +1,0 @@
-@echo off
-dotnet ef database update --project "C:\Users\ainur\source\repos\HomeWorkOtus\src\EntityFrameWorkCore" --startup-project "C:\Users\ainur\source\repos\HomeWorkOtus\src\PromoCodeFactory.WebHost" --context "EfDbContext"
