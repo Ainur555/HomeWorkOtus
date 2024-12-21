@@ -1,0 +1,25 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.Core/obj/Debug/net8.0
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.Core/obj
+/RabbitMQ/src/.vs/Pcf
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.DataAccess/obj/Debug/net8.0
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.DataAccess/obj
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.IntegrationTests/bin/Debug/net8.0
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.IntegrationTests/obj
+/RabbitMQ/src/Pcf.Administration/Pcf.Administration.WebHost/obj
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.Core/obj
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.DataAccess/obj
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.Integration/obj
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.IntegrationTests/obj/Debug/net8.0
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.IntegrationTests/obj
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.WebHost/obj
+/RabbitMQ/src/Pcf.ReceivingFromPartner/Pcf.ReceivingFromPartner.Core/obj
+/RabbitMQ/src/Pcf.ReceivingFromPartner/Pcf.ReceivingFromPartner.DataAccess/obj
+/RabbitMQ/src/Pcf.ReceivingFromPartner/Pcf.ReceivingFromPartner.Integration/obj
+/RabbitMQ/src/Pcf.ReceivingFromPartner/Pcf.ReceivingFromPartner.UnitTests/obj
+/RabbitMQ/src/Pcf.ReceivingFromPartner/Pcf.ReceivingFromPartner.UnitTests/bin/Debug/net8.0
+/RabbitMQ/src/Pcf.GivingToCustomer/Pcf.GivingToCustomer.IntegrationTests/bin/Debug/net8.0
+/RabbitMQ/src/Pcf.ReceivingFromPartner/Pcf.ReceivingFromPartner.WebHost/obj
